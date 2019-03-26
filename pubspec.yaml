@@ -1,0 +1,163 @@
+name: flutter_app
+description: A new Flutter application.
+
+dependencies:
+    flutter:
+        sdk: flutter
+    # The following adds the Cupertino Icons font to your application.
+    # Use with the CupertinoIcons class for iOS style icons.
+    cupertino_icons: ^0.1.2
+    dio: 1.0.13  #latest version
+    json_annotation: ^1.2.0 #json_serializable助手
+    fluro: ^1.3.4
+    fluttertoast: ^2.2.2
+    url_launcher: ^3.0.1
+    flutter_spinkit: ^3.1.0
+    flutter_easyrefresh: ^1.1.3 #下拉刷新库
+    shared_preferences: ^0.4.2 #数据存储
+    flutter_html: ^0.8.2
+    connectivity: ^0.4.2
+    event_bus: ^1.0.3
+    flutter_sticky_header: "^0.3.4" #scrollerView
+    image_picker: ^0.4.7 #图片选择控件
+    transparent_image: ^0.1.0
+    flutter_screenutil: ^0.5.1 #屏幕适配
+    provide: ^1.0.2
+    flutter_marquee:
+        git: https://github.com/LiuC520/flutter_marquee.git
+    flutter_custom_bottom_tab_bar:
+        git: https://github.com/LiuC520/flutter_custom_bottom_tab_bar   #真特么的奇怪
+
+dev_dependencies:
+    flutter_test:
+          sdk: flutter
+
+    build_runner: ^1.0.0  #创建.g.dart
+    json_serializable: ^1.5.1  #序列化json
+    # For information on the generic Dart part of this file, see the
+    # following page: https://www.dartlang.org/tools/pub/pubspec
+
+    # The following section is specific to Flutter.
+flutter:
+
+    # The following line ensures that the Material Icons font is
+    # included with your application, so that you can use the icons in
+    # the material Icons class.
+    uses-material-design: true
+
+    # To add assets to your application, add an assets section, like this:
+    assets:
+
+      - images/1.png   #声明图片的路径
+      - images/2.png   #声明图片的路径
+      - images/3.png   #声明图片的路径
+      - images/4.png   #声明图片的路径
+      - images/5.png   #声明图片的路径
+
+      - images/clickBack.png
+      - images/2.0x/clickBack.png
+      - images/3.0x/clickBack.png
+
+      - images/aboutUs.png
+      - images/2.0x/aboutUs.png
+      - images/3.0x/aboutUs.png
+
+      - images/lianxikefu.png
+      - images/2.0x/lianxikefu.png
+      - images/3.0x/lianxikefu.png
+
+      - images/shezhi.png
+      - images/2.0x/shezhi.png
+      - images/3.0x/shezhi.png
+
+      - images/shouhuodizhi.png
+      - images/2.0x/shouhuodizhi.png
+      - images/3.0x/shouhuodizhi.png
+
+      - images/wodetanwei.png
+      - images/2.0x/wodetanwei.png
+      - images/3.0x/wodetanwei.png
+
+      - images/wodeyinhangka.png
+      - images/2.0x/wodeyinhangka.png
+      - images/3.0x/wodeyinhangka.png
+
+      - images/seeIcon.png
+      - images/2.0x/seeIcon.png
+      - images/3.0x/seeIcon.png
+
+      - images/login_icon_guanbi.png
+      - images/2.0x/login_icon_guanbi.png
+      - images/3.0x/login_icon_guanbi.png
+
+      - images/login_pic.png
+      - images/2.0x/login_pic.png
+      - images/3.0x/login_pic.png
+
+      - images/noShopCart.png
+      - images/2.0x/noShopCart.png
+      - images/3.0x/noShopCart.png
+
+      - images/noNet.png
+      - images/2.0x/noNet.png
+      - images/3.0x/noNet.png
+
+      - images/avater_icon.png
+      - images/2.0x/avater_icon.png
+      - images/3.0x/avater_icon.png
+
+      - images/placeSite.jpg
+      - images/2.0x/placeSite.jpg
+      - images/3.0x/placeSite.jpg
+
+      - images/mine_icon_mine_onclick.png
+      - images/2.0x/mine_icon_mine_onclick.png
+      - images/3.0x/mine_icon_mine_onclick.png
+
+      - images/mine_icon_mine_click.png
+      - images/2.0x/mine_icon_mine_click.png
+      - images/3.0x/mine_icon_mine_click.png
+
+      - images/mine_icon_store_onclick.png
+      - images/2.0x/mine_icon_store_onclick.png
+      - images/3.0x/mine_icon_store_onclick.png
+
+      - images/mine_icon_store_click.png
+      - images/2.0x/mine_icon_store_click.png
+      - images/3.0x/mine_icon_store_click.png
+
+      - images/icon_shoppingcar_click.png
+      - images/2.0x/icon_shoppingcar_click.png
+      - images/3.0x/icon_shoppingcar_click.png
+
+      - images/icon_shoppingcar_onclick.png
+      - images/2.0x/icon_shoppingcar_onclick.png
+      - images/3.0x/icon_shoppingcar_onclick.png
+
+
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+    # https://flutter.io/assets-and-images/#resolution-aware.
+
+    # For details regarding adding assets from package dependencies, see
+    # https://flutter.io/assets-and-images/#from-packages
+
+    # To add custom fonts to your application, add a fonts section here,
+    # in this "flutter" section. Each entry in this list should have a
+    # "family" key with the font family name, and a "fonts" key with a
+    # list giving the asset and other descriptors for the font. For
+    # example:
+    # fonts:
+    #   - family: Schyler
+    #     fonts:
+    #       - asset: fonts/Schyler-Regular.ttf
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
+    #   - family: Trajan Pro
+    #     fonts:
+    #       - asset: fonts/TrajanPro.ttf
+    #       - asset: fonts/TrajanPro_Bold.ttf
+    #         weight: 700
+    #
+    # For details regarding fonts from package dependencies,
+    # see https://flutter.io/custom-fonts/#from-packages
