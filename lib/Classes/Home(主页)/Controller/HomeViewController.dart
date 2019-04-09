@@ -4,7 +4,7 @@ import 'package:flutter_app/Classes/Mine(我的)/Controller/MineViewController.d
 import 'package:flutter_app/Common/STStyle.dart';
 import 'package:flutter_app/Common/PlaceHolderView.dart';
 import 'package:flutter_app/Macros.dart';
-import 'package:flutter_app/Util/NetCheckTools.dart';
+import 'package:flutter_app/Common/Util/NetCheckTools.dart';
 import 'package:provide/provide.dart';
 import 'package:flutter_app/Provider(状态管理)/Counter.dart';
 import 'package:flutter_app/Provider(状态管理)/CountBLoC.dart';

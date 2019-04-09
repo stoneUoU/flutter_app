@@ -152,7 +152,7 @@ class _MineViewController extends State<MineViewController>  with AutomaticKeepA
 											  mainAxisAlignment: MainAxisAlignment.center,
 											  mainAxisSize: MainAxisSize.min,
 											  children: <Widget>[
-												  new Image.asset('images/${dataLists[count][i]["png"]}'),//("${dataLists[count][i]["png"]}"),
+												  new Image.asset('assets/images/${dataLists[count][i]["png"]}'),//("${dataLists[count][i]["png"]}"),
 												  Container(
 													  margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
 													  child: new Text(
@@ -170,7 +170,7 @@ class _MineViewController extends State<MineViewController>  with AutomaticKeepA
 			                        child:new Align(
 				                        alignment: FractionalOffset.centerRight,
 				                        child:  new Container(
-					                        child: new Image.asset('images/seeIcon.png'),
+					                        child: new Image.asset('assets/images/seeIcon.png'),
 				                        ),
 			                        )
 								),
@@ -570,7 +570,7 @@ class _MineViewController extends State<MineViewController>  with AutomaticKeepA
 									Navigator.pop(context);
 								},
 								child: new Container(
-									child: new Image.asset('images/clickBack.png'),
+									child: new Image.asset('assets/images/clickBack.png'),
 								),
 							),
 						),
@@ -581,7 +581,7 @@ class _MineViewController extends State<MineViewController>  with AutomaticKeepA
 									print("按下了哈哈哈哈哈");
 								},
 								child: new Container(
-									child: new Image.asset('images/clickBack.png'),
+									child: new Image.asset('assets/images/clickBack.png'),
 								),
 							),
 						),

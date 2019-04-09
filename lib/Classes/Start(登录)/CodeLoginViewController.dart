@@ -7,13 +7,13 @@ import 'package:flutter_app/Common/EnsureVisibleWhenFocused.dart';
 import './SmsLoginViewController.dart';
 import './CustomerTabBarPage.dart';
 
-import 'package:flutter_app/Util/CommonUntil.dart';
-import 'package:flutter_app/Util/NetTools.dart';
-import 'package:flutter_app/Util/ValidatedTools.dart';
-import 'package:flutter_app/Util/HudTips.dart';
-import 'package:flutter_app/Util/LocalData.dart';
+import 'package:flutter_app/Common/Util/CommonUntil.dart';
+import 'package:flutter_app/Common/Util/NetTools.dart';
+import 'package:flutter_app/Common/Util/ValidatedTools.dart';
+import 'package:flutter_app/Common/Util/HudTips.dart';
+import 'package:flutter_app/Common/Util/LocalData.dart';
+import 'package:flutter_app/Common/Util/EventBusTools.dart';
 
-import 'package:flutter_app/Util/EventBusTools.dart';
 import './Model/LoginEvent.dart';
 
 class CodeLoginViewController extends StatefulWidget {
@@ -75,7 +75,7 @@ class _CodeLoginViewController extends State<CodeLoginViewController> {
 											children: <Widget>[
 												new Container(
 													margin:EdgeInsets.fromLTRB(0, 15.0, 0,0),
-													child: new Image.asset('images/login_pic.png'),
+													child: new Image.asset('assets/images/login_pic.png'),
 												),
 											],
 										),
@@ -127,7 +127,7 @@ class _CodeLoginViewController extends State<CodeLoginViewController> {
 													margin:EdgeInsets.fromLTRB(0, 0, 0,0),
 													height:1,
 													width: Macros.ScreenW(context) - 30,
-													color:Color(STColors.colorC11)
+													color:Color(STColors.colorC07)
 												),
 											],
 										),
@@ -182,7 +182,7 @@ class _CodeLoginViewController extends State<CodeLoginViewController> {
 												  margin:EdgeInsets.fromLTRB(0, 0, 0,0),
 												  height:1,
 												  width: Macros.ScreenW(context) - 30,
-												  color:Color(STColors.colorC11)
+												  color:Color(STColors.colorC07)
 												),
 											],
 										),
@@ -247,7 +247,7 @@ class _CodeLoginViewController extends State<CodeLoginViewController> {
 									height: kToolbarHeight,
 									child: Row(
 										children: <Widget>[
-											new Image.asset('images/login_icon_guanbi.png')
+											new Image.asset('assets/images/login_icon_guanbi.png')
 										],
 									),
 								),
@@ -304,7 +304,9 @@ class _CodeLoginViewController extends State<CodeLoginViewController> {
 				LocalData.setPreference("AuthosStr", json.decode(feedBack)["data"]["token"]);
 				EventBusTools.eventBus.fire(new LoginEvent(json.decode(feedBack)["data"]["token"]));
 				Navigator.pop(context);
-				if (widget.code == 2) {
+				if (widget.code == 1) {
+					CustomerTabBarPage.getInstance().selectedFirstTab();
+				} else if (widget.code == 2) {
 					CustomerTabBarPage.getInstance().selectedSecondTab();
 				} else {
 					CustomerTabBarPage.getInstance().selectedThirdTab();

@@ -6,7 +6,7 @@ import 'package:flutter_app/Common/STStyle.dart';
 //import 'package:flutter_app/Provider(状态管理)/Counter.dart';
 //import 'package:flutter_app/Provider(状态管理)/CountBLoC.dart';
 //import 'package:flutter_app/Provider(状态管理)/Bloc_provider.dart';
-import 'package:flutter_app/Util/HttpUtil.dart';
+import 'package:flutter_app/Common/Util/HttpUtil.dart';
 import '../Model/NoticeMs.dart';
 import '../../Home(主页)/View/HomeList.dart';
 

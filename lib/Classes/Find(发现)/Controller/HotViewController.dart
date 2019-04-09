@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/Common/STStyle.dart';
 import 'package:flutter_app/Macros.dart';
-import 'package:flutter_app/Util/LocalData.dart';
-import 'package:flutter_app/Util/HudTips.dart';
+import 'package:flutter_app/Common/Util/LocalData.dart';
+import 'package:flutter_app/Common/Util/HudTips.dart';
 import '../../Start(登录)/CustomerTabBarPage.dart';
 
-import 'package:flutter_app/Util/EventBusTools.dart';
+import 'package:flutter_app/Common/Util/EventBusTools.dart';
 import '../../Start(登录)/Model/LoginEvent.dart';
 
 class HotViewController extends StatefulWidget {

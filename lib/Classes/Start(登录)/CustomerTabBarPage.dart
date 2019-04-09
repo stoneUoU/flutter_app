@@ -5,11 +5,14 @@ import '../Start(登录)/CodeLoginViewController.dart';
 import '../Find(发现)/Controller/FindPageViewController.dart';
 import '../Mine(我的)/Controller/MineViewController.dart';
 import '../Home(主页)/Controller/HomeViewController.dart';
-import 'package:flutter_app/Util/LocalData.dart';
-import 'package:flutter_app/Util/EventBusTools.dart';
+import '../GoodKinds(商品类别)/Controller/GoodKindsViewController.dart';
+import 'package:flutter_app/Common/Util/LocalData.dart';
+import 'package:flutter_app/Common/Util/EventBusTools.dart';
 import './Model/LoginEvent.dart';
 import 'package:flutter_app/Macros.dart';
 import 'package:flutter_custom_bottom_tab_bar/eachtab.dart';
+import '../RainBowHome(彩虹设计通)/Controller/RainBowHomeViewController.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomerTabBarPage extends StatefulWidget {
 	
@@ -87,6 +90,7 @@ class _CustomerTabBarPageState extends State<CustomerTabBarPage> with TickerProv
 	
 	@override
 	Widget build(BuildContext context) {
+		
 		return Scaffold(
 			bottomNavigationBar: Container(
 				height: kBottomNavigationBarHeight + Macros.TabbarSafeBottomM(context),
@@ -111,12 +115,12 @@ class _CustomerTabBarPageState extends State<CustomerTabBarPage> with TickerProv
 								  padding: EdgeInsets.all(0),
 								  icon: _selectedIndex == 0
 									? Image.asset(
-									  'images/mine_icon_store_click.png',
+									  'assets/images/mine_icon_store_click.png',
 									  width: 20,
 									  height: 20,
 								  )
 									: Image.asset(
-									  'images/mine_icon_store_onclick.png',
+									  'assets/images/mine_icon_store_onclick.png',
 									  width: 20,
 									  height: 20,
 								  ),
@@ -128,12 +132,12 @@ class _CustomerTabBarPageState extends State<CustomerTabBarPage> with TickerProv
 								  padding: EdgeInsets.all(0),
 								  icon: _selectedIndex == 1
 									? Image.asset(
-									  'images/icon_shoppingcar_click.png',
+									  'assets/images/icon_shoppingcar_click.png',
 									  width: 20,
 									  height: 20,
 								  )
 									: Image.asset(
-									  'images/icon_shoppingcar_onclick.png',
+									  'assets/images/icon_shoppingcar_onclick.png',
 									  width: 20,
 									  height: 20,
 								  ),
@@ -147,12 +151,12 @@ class _CustomerTabBarPageState extends State<CustomerTabBarPage> with TickerProv
 								  padding: EdgeInsets.all(0),
 								  icon: _selectedIndex == 2
 									? Image.asset(
-									  'images/mine_icon_mine_click.png',
+									  'assets/images/mine_icon_mine_click.png',
 									  width: 20,
 									  height: 20,
 								  )
 									: Image.asset(
-									  'images/mine_icon_mine_onclick.png',
+									  'assets/images/mine_icon_mine_onclick.png',
 									  width: 20,
 									  height: 20,
 								  ),
@@ -168,7 +172,8 @@ class _CustomerTabBarPageState extends State<CustomerTabBarPage> with TickerProv
 				physics: NeverScrollableScrollPhysics(), //设置滑动的效果，这个禁用滑动
 				controller: _tabController,
 				children: <Widget>[
-					DesignReportViewController(),
+					//GoodKindsViewController(tabbarSafeBottomM:Macros.TabbarSafeBottomM(context)),
+					RainBowHomeViewController(),
 					//这不是一个完美的解决方案:
 					FindViewController(tabbarSafeBottomM:Macros.TabbarSafeBottomM(context)),
 					MineViewController(tabbarSafeBottomM:Macros.TabbarSafeBottomM(context))

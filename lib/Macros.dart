@@ -15,6 +15,8 @@ class Macros {
 	
 	static String RainBowUrl = "https://api.chdesign.cn";//"http://192.168.1.97:8885";
 	
+	static String BXLifeUrl = "http://test.baixingliangfan.cn/baixing/";
+	
 	static String PicUrl = "https://pic.cht.znrmny.com";
 	
 	/** 获取屏幕宽度 */

@@ -6,8 +6,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Util/HttpUtil.dart';
-import 'package:flutter_app/Util/LocalData.dart';
+import 'package:flutter_app/Common/Util/HttpUtil.dart';
+import 'package:flutter_app/Common/Util/LocalData.dart';
 import './DesignReportDetailViewController.dart';
 import '../../Home(主页)/Model/HomeMs.dart';
 import '../../Home(主页)/View/HomeList.dart';
@@ -16,16 +16,13 @@ import '../View/HomeBannerView.dart';
 
 import 'package:flutter_app/Common/PlaceHolderView.dart';
 
-import 'package:flutter_app/Util/NetCheckTools.dart';
+import 'package:flutter_app/Common/Util/NetCheckTools.dart';
 
-import 'package:flutter_app/Util/EventBusTools.dart';
+import 'package:flutter_app/Common/Util/EventBusTools.dart';
 import '../../Start(登录)/Model/LoginEvent.dart';
-import '../../../Macros.dart';
 
-import'package:transparent_image/transparent_image.dart';
-
-//import 'package:flutter_app/ThirdPart/Easy_reFresh/header/material_header.dart';
-//import 'package:flutter_app/ThirdPart/Easy_reFresh/footer/material_footer.dart';
+import '../../../Routes(路由)/Routes.dart';
+import '../../../Application.dart';
 
 class DesignReportViewController extends StatefulWidget {
 	DesignReportViewController({Key key}) : super(key: key);
@@ -101,7 +98,7 @@ class _DesignReportViewController extends State<DesignReportViewController> with
 					    key: _DesignReportViewController_footerKey,
 					    loadText: "上拉可以加载更多",
 					    loadReadyText: "松开立即加载更多",
-					    loadingText: "正在加载更多数据中"+"...",
+					    loadingText: "加载数据中"+"...",
 					    loadedText: "加载完成",
 					    noMoreText: "暂无更多数据",
 					    moreInfo: "更新数据...",
@@ -150,7 +147,6 @@ class _DesignReportViewController extends State<DesignReportViewController> with
 			  )
 			),
 			body: getBody(),
-		
 		);
 	}
 	
@@ -185,8 +181,8 @@ class _DesignReportViewController extends State<DesignReportViewController> with
 								  onPageChanged: onPageChanged,
 								  buildShowView: (index, itemData) {
 									  return new FadeInImage(
-										placeholder: ExactAssetImage("images/1.png"),
-										image: NetworkImage(mResult[index].imagePath));
+										placeholder: AssetImage("images/placeSite.jpg"),
+										image: NetworkImage(mResult[index].imagePath),fit: BoxFit.cover,);
 								  },
 								  onBannerClickListener: (index, itemData) {
 //									  print("$index");
@@ -225,13 +221,21 @@ class _DesignReportViewController extends State<DesignReportViewController> with
 		return new HomeList(
 			homeMs: homeMs,
 			onHomeItemClickListener: (reportId) {
-				Navigator.of(context).push(new MaterialPageRoute(
-				    builder: (context) {
-					    return new DesignReportDetailViewController(
-						    reportId: reportId,
-					    );
-				    }
-				));
+//				Navigator.of(context).push(new MaterialPageRoute(
+//				    builder: (context) {
+//					    return new DesignReportDetailViewController(
+//						    reportId: reportId,
+//					    );
+//				    }
+//				));
+				String routeStr = Routes.designDetailView;
+				var bodyJson = '{"user_id":10001,"reportId":$reportId}';
+				Application.router
+				  .navigateTo(context, routeStr+"?data="+bodyJson,)
+				  .then((result) {
+					//pop返回的回掉
+					print(result);
+				});
 			},
 		);
 	}

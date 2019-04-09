@@ -46,7 +46,9 @@ class STColors {
 	
 	static const int colorC10 = 0xff000000;
 	
-	static const int colorC11 = 0xfff5f5f5;
+	static const int colorC11 = 0xfff3f3f3;
+	
+	static const int colorC12 = 0xff7a7a7a;
 	
 	static const MaterialColor primarySwatch = const MaterialColor(
 		primaryValue,

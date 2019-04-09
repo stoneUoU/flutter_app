@@ -21,7 +21,7 @@ class FindViewController extends StatefulWidget {
 class _FindViewController extends State<FindViewController> with SingleTickerProviderStateMixin {
 	
 	TabController _tabController;
-	var titles = ['首页', '西瓜视频', '找人'];
+	var titles = ['推荐', '科技', '汽车'];
 	var _selectedIndex = 0;
 	@override
 	void dispose() {
