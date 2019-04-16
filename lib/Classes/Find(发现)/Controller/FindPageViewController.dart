@@ -18,7 +18,7 @@ class FindViewController extends StatefulWidget {
 	_FindViewController createState() => _FindViewController();
 }
 
-class _FindViewController extends State<FindViewController> with SingleTickerProviderStateMixin {
+class _FindViewController extends State<FindViewController> with TickerProviderStateMixin {
 	
 	TabController _tabController;
 	var titles = ['推荐', '科技', '汽车'];
@@ -31,6 +31,7 @@ class _FindViewController extends State<FindViewController> with SingleTickerPro
 	
 	void initState() {
 		super.initState();
+		if (!mounted) return;
 		_tabController =
 		new TabController(vsync: this, initialIndex: 0, length: titles.length);
 		_tabController.addListener(() {
@@ -72,30 +73,51 @@ class _FindViewController extends State<FindViewController> with SingleTickerPro
 		    width:Macros.ScreenW(context),
 		    height:Macros.StatusH(context) + kToolbarHeight,
 		    color:Colors.redAccent,
-		    child:Container(
-			    margin: EdgeInsets.fromLTRB(0, Macros.StatusH(context), 0, 0),
-			    child: new TabBar(
-				    isScrollable: false,
-				    controller: _tabController,
-				    indicatorColor: Colors.transparent,
-				    labelColor: Colors.green,
-				    labelPadding: EdgeInsets.all(0),
-				    unselectedLabelColor: Colors.white,
-				    tabs: <Widget>[
-					    EachTab(
-					      height: 40,
-					      text: titles[0],
-					      textStyle: TextStyle(fontSize: 16)),
-					    EachTab(
-					      height: 40,
-					      text: titles[1],
-					      textStyle: TextStyle(fontSize: 16)),
-					    EachTab(
-					      height: 40,
-					      text: titles[2],
-					      textStyle: TextStyle(fontSize: 16)),
-				    ],
-			    )
+		    child:Row(
+			    children: <Widget>[
+				    new Expanded(
+					    flex: 1,
+					    child: new Container(
+						    height: 50,
+						    width:Macros.StatusH(context) + kToolbarHeight
+					    ),
+				    ),
+				    new Expanded(
+					    flex: 2,
+					    child: Container(
+					      margin: EdgeInsets.fromLTRB(0, Macros.StatusH(context), 0, 0),
+					      child: new TabBar(
+						      isScrollable: false,
+						      controller: _tabController,
+						      indicatorColor: Colors.transparent,
+						      labelColor: Colors.green,
+						      labelPadding: EdgeInsets.all(0),
+						      unselectedLabelColor: Colors.white,
+						      tabs: <Widget>[
+							      EachTab(
+								    height: 40,
+								    text: titles[0],
+								    textStyle: TextStyle(fontSize: 16)),
+							      EachTab(
+								    height: 40,
+								    text: titles[1],
+								    textStyle: TextStyle(fontSize: 16)),
+							      EachTab(
+								    height: 40,
+								    text: titles[2],
+								    textStyle: TextStyle(fontSize: 16)),
+						      ],
+					      )
+					    ),
+				    ),
+				    new Expanded(
+					    flex: 1,
+					    child: new Container(
+					      height: 50,
+					      width:Macros.StatusH(context) + kToolbarHeight
+					    ),
+				    )
+			    ],
 		    )
 		);
 	}

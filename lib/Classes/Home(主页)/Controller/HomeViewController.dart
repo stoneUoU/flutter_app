@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/Classes/Mine(我的)/Controller/MineViewController.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
 import 'package:flutter_app/Common/PlaceHolderView.dart';
 import 'package:flutter_app/Macros.dart';
 import 'package:flutter_app/Common/Util/NetCheckTools.dart';

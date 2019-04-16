@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_marquee/flutter_marquee.dart';
 import '../Model/RainBowHomeRotationMs.dart';
 import 'package:flutter_app/Macros.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
 
 class MarqueeView extends StatefulWidget {
 	List newLists = [];

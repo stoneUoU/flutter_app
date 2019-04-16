@@ -1,8 +1,9 @@
 
 import 'package:flutter/material.dart';
 import '../Model/KindMs.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
 
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 //flutter闭包与android类似的
 typedef void OnLeftNaviFontCellClickListener(KindData kindData);
 
@@ -27,19 +28,19 @@ class _LeftNaviFontCellState extends State<LeftNaviFontCell> {
 				widget.onLeftNaviFontCellClickListener(widget.kindData);
 			},
 			child: Container(
-			  width: 119,
-			  height: 44,
+			  width: ScreenUtil().setWidth(179),
+			  height: ScreenUtil().setHeight(87),
 			  child: new Column(
 				  children: <Widget>[
 					  Container(
-						width: 119,
-						height: 43,
+						width: ScreenUtil().setWidth(179),
+						height: ScreenUtil().setHeight(86),
 						child: Center(
 							child: Text(
 								"${widget.kindData.mallCategoryName}",
 								style: TextStyle(
 								  color: widget.changeColor == 1 ? Color(STColors.cardWhite) :Color(STColors.colorC04),
-								  fontSize: 14
+								  fontSize: ScreenUtil().setSp(28)
 								),
 								textAlign: TextAlign.center,
 								maxLines: 1,
@@ -48,8 +49,8 @@ class _LeftNaviFontCellState extends State<LeftNaviFontCell> {
 						)
 					  ),
 					  Container(
-						  width: 119,
-						  height: 1,
+						  width: ScreenUtil().setWidth(179),
+						  height: ScreenUtil().setHeight(1),
 						  color: Colors.black12,
 					  ),
 				  ],

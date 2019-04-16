@@ -5,116 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a8316fa-e085-4681-b32f-2c078a282acb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/2.0x/designCourse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/2.0x/designReport.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/2.0x/fastReport.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/2.0x/findDesigner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/2.0x/planningCase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/2.0x/privateSchool.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/3.0x/designCourse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/3.0x/designReport.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/3.0x/fastReport.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/3.0x/findDesigner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/3.0x/planningCase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/3.0x/privateSchool.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Application.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/View/PhotoView.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodKindsViewController.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/LeftNaviViewController.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/RightGoodViewController.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Model/GoodMs.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Model/KindMs.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/LeftNaviFontCell.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightGridCell.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightTopNaviFontCell.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Controller/RainBowHomeViewController.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Model/RainBowHomeListMs.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Model/RainBowHomeRotationMs.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/BoxLabelView.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignRealStuffCell.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignerNoPhotoCell.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignerPhotoCell.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PrivateSchoolCell.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PurchaseNoPhotoCell.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PurchasePhotoCell.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/MarqueeView.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/RainBowHorizontalView.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/SwiperView.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Common/Util/BXLifeNets.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Common/Util/BXLifeTools.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Common/Util/LogUtil.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Provider(状态管理)/LeftNaviProvider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Provider(状态管理)/RightGoodViewProvider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Routes(路由)/Route_handlers.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Routes(路由)/Routes.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Runner.entitlements" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Classes/Future(同异步学习)/Controller/FutureViewController.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodDetailViewController.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/Controller/GoodListViewController.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/Controller/XianFishViewController.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/View/GoodItem.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Common/Config/Themes.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Common/PhotoView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flutter_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flutter_app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/aboutUs.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/aboutUs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/avater_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/avater_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/clickBack.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/clickBack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/icon_shoppingcar_click.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/icon_shoppingcar_click.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/icon_shoppingcar_onclick.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/icon_shoppingcar_onclick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/lianxikefu.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/lianxikefu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/login_icon_guanbi.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/login_icon_guanbi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/login_pic.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/login_pic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/mine_icon_mine_click.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/mine_icon_mine_click.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/mine_icon_mine_onclick.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/mine_icon_mine_onclick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/mine_icon_store_click.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/mine_icon_store_click.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/mine_icon_store_onclick.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/mine_icon_store_onclick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/noNet.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/noNet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/noShopCart.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/noShopCart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/placeSite.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/placeSite.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/seeIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/seeIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/shezhi.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/shezhi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/shouhuodizhi.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/shouhuodizhi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/wodetanwei.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/wodetanwei.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.0x/wodeyinhangka.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.0x/wodeyinhangka.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/aboutUs.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/aboutUs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/avater_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/avater_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/clickBack.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/clickBack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/icon_shoppingcar_click.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/icon_shoppingcar_click.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/icon_shoppingcar_onclick.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/icon_shoppingcar_onclick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/lianxikefu.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/lianxikefu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/login_icon_guanbi.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/login_icon_guanbi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/login_pic.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/login_pic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/mine_icon_mine_click.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/mine_icon_mine_click.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/mine_icon_mine_onclick.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/mine_icon_mine_onclick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/mine_icon_store_click.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/mine_icon_store_click.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/mine_icon_store_onclick.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/mine_icon_store_onclick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/noNet.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/noNet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/noShopCart.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/noShopCart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/placeSite.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/placeSite.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/seeIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/seeIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/shezhi.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/shezhi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/shouhuodizhi.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/shouhuodizhi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/wodetanwei.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/wodetanwei.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.0x/wodeyinhangka.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.0x/wodeyinhangka.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Controller/DesignReportDetailViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Controller/DesignReportDetailViewController.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Controller/DesignReportViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Controller/DesignReportViewController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/View/HomeBannerView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/View/HomeBannerView.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/FindPageViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/FindPageViewController.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/FollowViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/FollowViewController.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/HotViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/HotViewController.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/NoticeViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/NoticeViewController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodKindsViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodKindsViewController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/LeftNaviViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/LeftNaviViewController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/RightGoodViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/RightGoodViewController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/LeftNaviFontCell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/LeftNaviFontCell.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightGridCell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightGridCell.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightTopNaviFontCell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightTopNaviFontCell.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Classes/Home(主页)/Controller/HomeViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/Home(主页)/Controller/HomeViewController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/Home(主页)/Model/CarouselMs.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Model/CarouselMs.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/Home(主页)/View/BannerView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/Home(主页)/View/BannerView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/Home(主页)/View/HomeList.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/Home(主页)/View/HomeList.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Classes/Mine(我的)/Controller/MineViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/Mine(我的)/Controller/MineViewController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Controller/RainBowHomeViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Controller/RainBowHomeViewController.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/BoxLabelView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/BoxLabelView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignRealStuffCell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignRealStuffCell.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignerNoPhotoCell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignerNoPhotoCell.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignerPhotoCell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignerPhotoCell.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PrivateSchoolCell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PrivateSchoolCell.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PurchaseNoPhotoCell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PurchaseNoPhotoCell.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PurchasePhotoCell.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PurchasePhotoCell.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/MarqueeView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/MarqueeView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/RainBowHorizontalView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/RainBowHorizontalView.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Classes/Start(登录)/CodeLoginViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/Start(登录)/CodeLoginViewController.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Classes/Start(登录)/CustomerTabBarPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/Start(登录)/CustomerTabBarPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Classes/Start(登录)/SmsLoginViewController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Classes/Start(登录)/SmsLoginViewController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Common/STStringBase.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Common/STStyle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/STStyle.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Macros.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Macros.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Util/CommonUntil.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/Util/CommonUntil.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Util/EventBusTools.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/Util/EventBusTools.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Util/HttpUtil.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/Util/HttpUtil.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Util/HudTips.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/Util/HudTips.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Util/LocalData.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/Util/LocalData.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Util/NetCheckTools.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/Util/NetCheckTools.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Util/NetTools.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/Util/NetTools.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Util/ValidatedTools.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/Util/ValidatedTools.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Common/PlaceHolderView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/PlaceHolderView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Common/STStyle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/Config/STStyle.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Common/Util/HudTips.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Common/Util/HudTips.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Provider(状态管理)/RightGoodViewProvider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Provider(状态管理)/RightGoodViewProvider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Routes(路由)/Route_handlers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Routes(路由)/Route_handlers.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Routes(路由)/Routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Routes(路由)/Routes.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -206,86 +149,134 @@
     <session id="1441793146">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.15" value="4" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.2" value="5" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.82" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="GoodKindsViewController" value="1" />
-          <entry key="dart" value="375" />
+          <entry key="dart" value="545" />
+          <entry key="gradle" value="2" />
           <entry key="json" value="1" />
           <entry key="lock" value="1" />
           <entry key="png" value="5" />
-          <entry key="yaml" value="17" />
+          <entry key="xml" value="1" />
+          <entry key="yaml" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Dart" value="376" />
+          <entry key="Dart" value="546" />
+          <entry key="Groovy" value="2" />
           <entry key="Image" value="5" />
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="YAML" value="17" />
+          <entry key="XML" value="1" />
+          <entry key="YAML" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dart" value="13488" />
-          <entry key="yaml" value="152" />
+          <entry key="dart" value="16222" />
+          <entry key="gradle" value="4" />
+          <entry key="yaml" value="179" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dart" value="13488" />
-          <entry key="YAML" value="152" />
+          <entry key="Dart" value="16222" />
+          <entry key="Groovy" value="4" />
+          <entry key="YAML" value="179" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-              <folding>
-                <element signature="e#1#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Controller/RainBowHomeViewController.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="107" column="24" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_easyrefresh-1.0.7/lib/src/refresher.dart">
+        <entry file="file://$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/View/GoodItem.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="403" column="63" selection-start-line="403" selection-start-column="63" selection-end-line="403" selection-end-column="63" />
+            <state relative-caret-position="642">
+              <caret line="114" column="60" selection-start-line="114" selection-start-column="60" selection-end-line="114" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/Controller/GoodListViewController.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="115" column="32" lean-forward="true" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodDetailViewController.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="41" column="35" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodKindsViewController.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/LeftNaviViewController.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/RightGoodViewController.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="258" column="17" lean-forward="true" selection-start-line="258" selection-start-column="17" selection-end-line="258" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/Controller/XianFishViewController.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="144" column="42" selection-start-line="144" selection-start-column="42" selection-end-line="144" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -301,36 +292,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>widgets</find>
-      <find>onHorizontalViewClickListener</find>
-      <find>RightTopNaviFontCell</find>
-      <find>kindMs</find>
-      <find>[</find>
-      <find>==========</find>
-      <find>Provide</find>
-      <find>putLeftClickFlag</find>
-      <find>changeColor</find>
-      <find>log</find>
-      <find>clickFlag</find>
-      <find>put</find>
-      <find>StreamBuilder</find>
-      <find>RightGoodViewProvider</find>
-      <find>snapshot</find>
-      <find>data</find>
-      <find>!=</find>
-      <find>**********</find>
-      <find>log.fine</find>
-      <find>+++++++++++++</find>
-      <find>=====</find>
+      <find>Swiper</find>
+      <find>footerStatusChanged</find>
+      <find>SingleTickerProviderStateMixin</find>
+      <find>SwiperView</find>
+      <find>AsyncSnapshot</find>
+      <find>bannerTitle</find>
+      <find>++++++++++++++</find>
+      <find>showLoadingDialog</find>
       <find>print</find>
-      <find>PlaceHolderView</find>
-      <find>goodMs</find>
+      <find>height</find>
+      <find>connectivity</find>
       <find>_getGoodMs</find>
-      <find>Provide.value&lt;RightGoodViewProvider&gt;(context)</find>
-      <find>_getContent</find>
-      <find>length</find>
-      <find>page</find>
-      <find>差异</find>
+      <find>_sendMutilR</find>
+      <find>avater_icon</find>
+      <find>_setEventBus</find>
+      <find>setState</find>
+      <find>return</find>
+      <find>setS</find>
+      <find>====</find>
+      <find>Log</find>
+      <find>mounted</find>
+      <find>_getData</find>
+      <find>toa</find>
+      <find>getRightGridRow</find>
+      <find>route</find>
+      <find>Routes</find>
+      <find>_buildAnimatedHeader</find>
+      <find>onReceiveNotification</find>
+      <find>handleRemoteNotification</find>
+      <find>Application</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/ios/Runner.xcworkspace</dir>
@@ -342,24 +333,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/Application.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/HotViewController.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/NoticeViewController.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/Home(主页)/Controller/HomeViewController.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Controller/RainBowHorizontalView.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Model/RainBowHomeRotationMs.dart" />
-        <option value="$PROJECT_DIR$/lib/Common/Util/HttpUtil.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/BoxLabelView.dart" />
-        <option value="$PROJECT_DIR$/lib/Common/STStyle.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Model/RainBowHomeListMs.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PurchaseNoPhotoCell.dart" />
-        <option value="$PROJECT_DIR$/lib/ThirdPart/Easy_reFresh/translations.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/Start(登录)/CodeLoginViewController.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Controller/DesignReportDetailViewController.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/FollowViewController.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/Mine(我的)/Controller/MineViewController.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/MarqueeView.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/RainBowHorizontalView.dart" />
         <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignerNoPhotoCell.dart" />
         <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignRealStuffCell.dart" />
         <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PrivateSchoolCell.dart" />
@@ -367,8 +340,6 @@
         <option value="$PROJECT_DIR$/lib/Classes/Start(登录)/SmsLoginViewController.dart" />
         <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignerPhotoCell.dart" />
         <option value="$PROJECT_DIR$/lib/Common/Util/LogUtil.dart" />
-        <option value="$PROJECT_DIR$/lib/Routes(路由)/Route_handlers.dart" />
-        <option value="$PROJECT_DIR$/lib/Routes(路由)/Routes.dart" />
         <option value="$PROJECT_DIR$/lib/Macros.dart" />
         <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Model/KindModel.dart" />
         <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Model/GoodMs.dart" />
@@ -376,31 +347,51 @@
         <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_easyrefresh-1.2.3/lib/src/refresher.dart" />
         <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/LeftNaviList.dart" />
         <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PurchasePhotoCell.dart" />
-        <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_easyrefresh-1.2.7/lib/src/refresher.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightGridCell.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodKindsViewController.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/LeftNaviFontCell.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightTopNaviFontCell.dart" />
-        <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/Common/Util/BXLifeNets.dart" />
         <option value="$PROJECT_DIR$/lib/Common/Util/BXLifeTools.dart" />
         <option value="$PROJECT_DIR$/lib/Provider(状态管理)/LeftNaviProvider.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/LeftNaviViewController.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Controller/DesignReportViewController.dart" />
-        <option value="$PROJECT_DIR$/lib/Provider(状态管理)/RightGoodViewProvider.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/RightGoodViewController.dart" />
-        <option value="$PROJECT_DIR$/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/lib/Classes/Start(登录)/CustomerTabBarPage.dart" />
-        <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Controller/RainBowHomeViewController.dart" />
         <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_easyrefresh-1.0.7/lib/src/refresher.dart" />
+        <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_easyrefresh-1.2.7/lib/src/refresher.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/Home(主页)/View/HomeList.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/View/PhotoView.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/View/HomeBannerView.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/LeftNaviFontCell.dart" />
+        <option value="$PROJECT_DIR$/lib/Provider(状态管理)/RightGoodViewProvider.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/FollowViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/HotViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodKindsViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/LeftNaviViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/Future(同异步学习)/Controller/FutureViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightTopNaviFontCell.dart" />
+        <option value="$PROJECT_DIR$/lib/Routes(路由)/Routes.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightGridCell.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/RightGoodViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodDetailViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/Mine(我的)/Controller/MineViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/FindPageViewController.dart" />
+        <option value="$PROJECT_DIR$/android/app/build.gradle" />
+        <option value="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Controller/DesignReportViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Routes(路由)/Route_handlers.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Controller/RainBowHomeViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Controller/DesignReportDetailViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Common/PhotoView.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/Start(登录)/CustomerTabBarPage.dart" />
+        <option value="$PROJECT_DIR$/lib/Common/Config/Themes.dart" />
+        <option value="$PROJECT_DIR$/lib/main.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/NoticeViewController.dart" />
+        <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/View/GoodItemView.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/Controller/XianFishViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/Controller/GoodListViewController.dart" />
+        <option value="$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/View/GoodItem.dart" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="132" />
-    <option name="y" value="35" />
-    <option name="width" value="1398" />
-    <option name="height" value="1023" />
+    <option name="x" value="105" />
+    <option name="y" value="76" />
+    <option name="width" value="1334" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -408,7 +399,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -432,14 +422,14 @@
               <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="Classes" type="462c0819:PsiDirectoryNode" />
-              <item name="RainBowHome(彩虹设计通)" type="462c0819:PsiDirectoryNode" />
+              <item name="DesignReport(设计报告)" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flutter_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="Classes" type="462c0819:PsiDirectoryNode" />
-              <item name="RainBowHome(彩虹设计通)" type="462c0819:PsiDirectoryNode" />
+              <item name="DesignReport(设计报告)" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -447,18 +437,51 @@
               <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="Classes" type="462c0819:PsiDirectoryNode" />
-              <item name="Start(登录)" type="462c0819:PsiDirectoryNode" />
+              <item name="GoodKinds(商品类别)" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Classes" type="462c0819:PsiDirectoryNode" />
+              <item name="GoodKinds(商品类别)" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Classes" type="462c0819:PsiDirectoryNode" />
+              <item name="XianFish(咸鱼主页)" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Classes" type="462c0819:PsiDirectoryNode" />
+              <item name="XianFish(咸鱼主页)" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Classes" type="462c0819:PsiDirectoryNode" />
+              <item name="XianFish(咸鱼主页)" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="increment&#9;null&#9;null&#10;avater_ico&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/assets/images/2.0x/avater_icon.png&#10;images/&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/ios/Flutter/flutter_assets/images&#10;colorC11&#9;null&#9;null&#10;STStringBase&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/lib/Common/STStringBase.dart&#10;EnsureVisibleWhenFocused&#9;null&#9;null&#10;。。。。。。。。。&#9;null&#9;null&#10;RainBowUrl&#9;null&#9;null&#10;lib/Start/&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/flutter_app/lib/Classes/Start(登录)&#10;mounted)&#9;null&#9;null&#10;HomeList&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/flutter_app/lib/Home/View/HomeList.dart&#10;HomeBannerView&#9;null&#9;null&#10;kBottomNavigationBarHeight&#9;null&#9;null&#10;shouhuodizhi&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/flutter_app/ios/Flutter/flutter_assets/images/2.0x/shouhuodizhi.png" />
+    <property name="SearchEverywhereHistoryKey" value="SingleTickerProviderStateMixin&#9;null&#9;null&#10;increment&#9;null&#9;null&#10;avater_ico&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/assets/images/2.0x/avater_icon.png&#10;images/&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/ios/Flutter/flutter_assets/images&#10;colorC11&#9;null&#9;null&#10;STStringBase&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/lib/Common/STStringBase.dart&#10;EnsureVisibleWhenFocused&#9;null&#9;null&#10;。。。。。。。。。&#9;null&#9;null&#10;RainBowUrl&#9;null&#9;null&#10;lib/Start/&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/flutter_app/lib/Classes/Start(登录)&#10;mounted)&#9;null&#9;null&#10;HomeList&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/flutter_app/lib/Home/View/HomeList.dart&#10;HomeBannerView&#9;null&#9;null&#10;kBottomNavigationBarHeight&#9;null&#9;null&#10;shouhuodizhi&#9;FILE&#9;file:///Users/stone/Flutter/flutter_app/flutter_app/ios/Flutter/flutter_assets/images/2.0x/shouhuodizhi.png" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
@@ -470,11 +493,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/Common/Config" />
+      <recent name="$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Model" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/images/3.0x" />
       <recent name="$PROJECT_DIR$/images/2.0x" />
-      <recent name="$PROJECT_DIR$/images/3.0x/RainBowHome(设计通)" />
-      <recent name="$PROJECT_DIR$/images/2.0x/RainBowHome(设计通)" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -550,10 +573,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="132" y="35" width="1398" height="1023" extended-state="0" />
-    <editor active="true" />
+    <frame x="105" y="76" width="1334" height="1036" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29494798" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25351015" />
       <window_info id="Structure" order="1" weight="0.21203831" />
       <window_info id="Designer" order="2" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -563,17 +585,17 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.360262" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49576548" visible="true" weight="0.4747807" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7401848" weight="0.5556757" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49964157" weight="0.36252773" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49964157" weight="0.3615222" />
       <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.3240418" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.32346722" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49892473" weight="0.41375545" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49967426" weight="0.32980973" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50107527" side_tool="true" weight="0.40697673" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49967426" weight="0.3545946" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.25981525" side_tool="true" weight="0.36575052" />
       <window_info anchor="bottom" id="Flutter Performance" order="13" side_tool="true" weight="0.32980973" />
       <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49790502" weight="0.32957748" />
       <window_info anchor="bottom" id="Terminal" order="15" weight="0.27906978" />
@@ -586,7 +608,7 @@
       <window_info anchor="right" id="Flutter Outline" order="6" weight="0.32980227" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Assistant" order="9" weight="0.3298969" />
+      <window_info anchor="right" id="Assistant" order="9" weight="0.3342956" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -596,328 +618,263 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/ThirdPart/Easy_reFresh/header/material_header.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Model/CarouselMs.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="83" column="71" selection-start-line="83" selection-start-column="59" selection-end-line="83" selection-end-column="71" />
+        <state relative-caret-position="57">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_easyrefresh-1.2.3/lib/src/refresher.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Common/Util/NetCheckTools.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="705" column="7" selection-start-line="705" selection-start-column="7" selection-end-line="705" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ThirdPart/Easy_reFresh/footer/material_footer.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="92" column="71" selection-start-line="92" selection-start-column="59" selection-end-line="92" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/BoxLabelView.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PurchasePhotoCell.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="10" lean-forward="true" selection-end-line="102" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/SwiperView.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_easyrefresh-1.2.7/lib/src/refresher.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="710" column="45" selection-start-line="710" selection-start-column="45" selection-end-line="710" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/Start(登录)/SmsLoginViewController.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="300" column="43" selection-start-line="300" selection-start-column="43" selection-end-line="300" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/Start(登录)/CodeLoginViewController.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="297" column="61" selection-start-line="297" selection-start-column="61" selection-end-line="297" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Flutter_sdk/flutter/flutter/packages/flutter/lib/src/widgets/scroll_view.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="1264" column="20" lean-forward="true" selection-start-line="1264" selection-start-column="20" selection-end-line="1264" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/View/PhotoView.dart">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignerNoPhotoCell.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="122" column="30" selection-start-line="116" selection-start-column="35" selection-end-line="122" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/DesignerPhotoCell.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="43" column="22" selection-start-line="39" selection-start-column="27" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/CustomScrollViewCells/PrivateSchoolCell.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="41" column="29" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Flutter_sdk/flutter/flutter/packages/flutter/lib/src/rendering/flex.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="156" column="7" selection-start-line="156" selection-start-column="2" selection-end-line="156" selection-end-column="7" />
+        <state relative-caret-position="19">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Flutter_sdk/flutter/flutter/packages/flutter/lib/src/rendering/sliver_grid.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="296" column="4" selection-start-line="296" selection-start-column="4" selection-end-line="298" selection-end-column="32" />
+        <state relative-caret-position="5415">
+          <caret line="294" column="8" selection-start-line="294" selection-start-column="8" selection-end-line="294" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Flutter_sdk/flutter/flutter/packages/flutter/lib/src/material/constants.dart">
+    <entry file="file://$PROJECT_DIR$/../Flutter_sdk/flutter/flutter/packages/flutter/lib/src/widgets/framework.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="388">
+          <caret line="3489" column="11" selection-start-line="3489" selection-start-column="11" selection-end-line="3489" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ios/.symlinks/plugins/shared_preferences/example/lib/main.dart">
+    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_staggered_grid_view-0.2.7/lib/src/widgets/staggered_grid_view.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="59" column="19" lean-forward="true" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+        <state relative-caret-position="-10">
+          <caret line="322" column="22" selection-start-line="322" selection-start-column="4" selection-end-line="322" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Provider(状态管理)/Counter.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Macros.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Provider(状态管理)/CountBLoC.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Provider(状态管理)/Bloc_provider.dart">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/View/RainBowHorizontalView.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Provider(状态管理)/RightGoodViewProvider.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="32" column="46" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="46" />
+        <state relative-caret-position="437">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/provide-1.0.2/lib/provide.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Classes/Start(登录)/SmsLoginViewController.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="241" column="6" selection-start-line="241" selection-start-column="6" selection-end-line="241" selection-end-column="6" />
+        <state relative-caret-position="-289" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Common/Util/HttpUtil.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Application.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/FollowViewController.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="34" />
+        <state relative-caret-position="418">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/Start(登录)/CodeLoginViewController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightTopNaviFontCell.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/LeftNaviFontCell.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="41" column="34" selection-start-line="40" selection-start-column="41" selection-end-line="41" selection-end-column="34" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Common/STStyle.dart">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <caret line="15" column="67" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="67" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Common/Util/NetTools.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="60" column="4" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Common/Util/HttpUtil.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#1531#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Common/Util/BXLifeNets.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="84" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Common/Util/BXLifeTools.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Common/Util/CommonUntil.dart">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Model/GoodMs.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Model/KindMs.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/LeftNaviViewController.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/Mine(我的)/Controller/MineViewController.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodKindsViewController.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/Home(主页)/Controller/HomeViewController.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="102" column="25" selection-start-line="95" selection-start-column="27" selection-end-line="102" selection-end-column="25" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="19">
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightGridCell.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="40" column="25" selection-start-line="35" selection-start-column="30" selection-end-line="40" selection-end-column="25" />
+        <state relative-caret-position="128">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Flutter_sdk/flutter/flutter/packages/flutter/lib/src/material/tabs.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20197">
+          <caret line="1082" column="16" selection-start-line="1082" selection-start-column="16" selection-end-line="1082" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/FindPageViewController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1501">
+          <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/Mine(我的)/Controller/MineViewController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2033">
+          <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="116" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Flutter_sdk/flutter/flutter/packages/flutter/lib/src/widgets/scroll_physics.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="34" column="95" selection-start-line="34" selection-start-column="95" selection-end-line="34" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/Future(同异步学习)/Controller/FutureViewController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Routes(路由)/Routes.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Routes(路由)/Route_handlers.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Application.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/fluro-1.4.0/lib/src/router.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Controller/RainBowHomeViewController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="279" column="3" selection-start-line="279" selection-start-column="3" selection-end-line="279" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Common/PlaceHolderView.dart">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Common/EnsureVisibleWhenFocused.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#4474#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Controller/DesignReportDetailViewController.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Common/PhotoView.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="964">
-          <caret line="214" column="26" selection-start-line="207" selection-start-column="24" selection-end-line="214" selection-end-column="26" />
+        <state relative-caret-position="57">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Common/Config/Themes.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Common/Config/STStyle.dart">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="41" column="39" lean-forward="true" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/HotViewController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-607">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/Find(发现)/Controller/NoticeViewController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="46" column="45" lean-forward="true" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Controller/DesignReportViewController.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="41" selection-start-line="41" selection-end-line="43" selection-end-column="110" />
+        <state relative-caret-position="403">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Flutter_sdk/flutter/flutter/packages/flutter/lib/src/widgets/framework.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Common/BasefulWidget.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="264" column="3" lean-forward="true" selection-start-line="264" selection-start-column="3" selection-end-line="264" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Provider(状态管理)/RightGoodViewProvider.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="54">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Classes/Start(登录)/CustomerTabBarPage.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="174" column="22" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
+        <state relative-caret-position="260">
+          <caret line="189" column="43" selection-start-line="189" selection-start-column="43" selection-end-line="189" selection-end-column="43" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -926,65 +883,106 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="200">
+          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/RightGoodViewController.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/View/PhotoView.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="233" column="16" selection-start-line="233" selection-start-column="16" selection-end-line="233" selection-end-column="16" />
+        <state>
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_staggered_grid_view-0.2.7/lib/src/widgets/staggered_tile.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_easyrefresh-1.2.7/lib/src/header/header.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="255" column="2" selection-start-line="255" selection-start-column="2" selection-end-line="255" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/DesignReport(设计报告)/Controller/DesignReportDetailViewController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="42" selection-start-line="36" selection-start-column="2" selection-end-line="39" selection-end-column="42" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/View/RightTopNaviFontCell.dart">
+    <entry file="file://$PROJECT_DIR$/../Flutter_sdk/flutter/flutter/packages/flutter/lib/src/widgets/heroes.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="903">
+          <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodKindsViewController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/LeftNaviViewController.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/RightGoodViewController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="258" column="17" lean-forward="true" selection-start-line="258" selection-start-column="17" selection-end-line="258" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/Controller/XianFishViewController.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="144" column="42" selection-start-line="144" selection-start-column="42" selection-end-line="144" selection-end-column="42" />
           <folding>
-            <element signature="e#1#40#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Provider(状态管理)/LeftNaviProvider.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/Controller/GoodListViewController.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="393">
+          <caret line="115" column="32" lean-forward="true" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
           <folding>
-            <element signature="e#1#40#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Classes/GoodKinds(商品类别)/Controller/GoodDetailViewController.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="481">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Classes/RainBowHome(彩虹设计通)/Controller/RainBowHomeViewController.dart">
+    <entry file="file://$PROJECT_DIR$/lib/Classes/XianFish(咸鱼主页)/View/GoodItem.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="107" column="24" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
+        <state relative-caret-position="642">
+          <caret line="114" column="60" selection-start-line="114" selection-start-column="60" selection-end-line="114" selection-end-column="60" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_easyrefresh-1.0.7/lib/src/refresher.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="403" column="63" selection-start-line="403" selection-start-column="63" selection-end-line="403" selection-end-column="63" />
         </state>
       </provider>
     </entry>

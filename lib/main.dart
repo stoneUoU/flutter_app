@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import './Classes/Start(登录)/CustomerTabBarPage.dart';
 import 'package:fluro/fluro.dart';
 import 'package:provide/provide.dart';
@@ -11,6 +12,7 @@ import './Routes(路由)/Routes.dart';
 import './Application.dart';
 import './Common/Util/LogUtil.dart';
 import './Classes/GoodKinds(商品类别)/Model/KindMs.dart';
+import 'Common/Config/Themes.dart';
 
 void main() {
 	//Colors.red  Colors.blue   Colors.green
@@ -40,12 +42,16 @@ class CustomerApp extends StatelessWidget {
 		Routes.configureRoutes(router);
 		Application.router = router;
 	}
+	
     @override
     Widget build(BuildContext context) {
 //		debugShowCheckedModeBanner: false, // 在调试期间，右上角的DEBUG字样
 		final app = BlocProvider(
 			child: MaterialApp(
 			  title: 'Wifi伴侣',
+			  theme: defaultTargetPlatform == TargetPlatform.iOS
+				? Themes.kIOSTheme
+				: Themes.kDefaultTheme, // 根据平台获取主题
 			  debugShowCheckedModeBanner: false,  // 设置这一属性即可
 				onGenerateRoute: Application.router.generator,
 			  home:CustomerTabBarPage.getInstance(),
@@ -54,3 +60,38 @@ class CustomerApp extends StatelessWidget {
 		return app;
     }
 }
+
+//void main(){
+//	test2();
+//}
+//
+//void test() async {
+//	Future.delayed(Duration(seconds: 5),(){
+//		print("test");
+//	}).then((_){
+//		print("then");
+//	});
+//}
+//
+//void test2() async {
+//	await Future.sync(test);
+//	print("test2");
+//}
+
+
+//void main(){
+//	test2();
+//}
+//
+//void test() async {
+//	return Future.delayed(Duration(seconds: 5),(){
+//		print("test");
+//	}).then((_){
+//		print("then");
+//	});
+//}
+//
+//void test2() async {
+//	await Future.sync(test);
+//	print("test2");
+//}

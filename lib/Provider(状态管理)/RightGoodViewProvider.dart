@@ -25,7 +25,6 @@ class RightGoodViewProvider with ChangeNotifier {
 	
 	void putGoodMs(GoodMs value) {
 		_goodMs = value;
-		print("===========${value}");
 		notifyListeners();
 	}
 	

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../Model/RainBowHomeListMs.dart';
 import 'package:flutter_app/Macros.dart';
 import '../BoxLabelView.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
 
 class PurchaseNoPhotoCell extends StatefulWidget {
   Rs rs;

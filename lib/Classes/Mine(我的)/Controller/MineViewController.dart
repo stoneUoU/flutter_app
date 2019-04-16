@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 
 import 'package:flutter_app/Macros.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
 
 class MineViewController extends StatefulWidget {
 	
@@ -16,12 +16,13 @@ class MineViewController extends StatefulWidget {
 	_MineViewController createState() => _MineViewController();
 }
 
-class _MineViewController extends State<MineViewController>  with AutomaticKeepAliveClientMixin,TickerProviderStateMixin{
-	
+class _MineViewController extends State<MineViewController>  with AutomaticKeepAliveClientMixin,SingleTickerProviderStateMixin{
+	TabController _tabController;
 	List dataLists = new List();
 	@override
 	void initState() {
 		super.initState();
+		_tabController = new TabController(vsync: this, length: 3);
 		dataLists = [
 			[
 				{"png":"wodeyinhangka.png","vals":"我的优惠券"},
@@ -103,166 +104,177 @@ class _MineViewController extends State<MineViewController>  with AutomaticKeepA
 //		slivers.addAll(_buildHeaderBuilderLists(context, i, i += 2));
 //		slivers.add(_buildUnAtacticCell());
 //		slivers.addAll(_buildGrids(context, i, i += 2));
-		for (int index=0;index<dataLists.length;index++) {
-			slivers.add(_makeFixedHeader(context));
-			slivers.addAll(_buildLists(context, 0, index));
-			slivers.add(_makeFixedFooter(context));
-		}
-		slivers.add(_makeFixedHeader(context));
+		
+//		slivers.add(Container(
+//			child: new TabBarView(
+//				controller: _tabController,
+//				children: <Widget>[
+//					new Center(child: new Text('自行车')),
+//					new Center(child: new Text('船')),
+//					new Center(child: new Text('巴士')),
+//				],
+//			),
+//		));
+//		for (int index=0;index<dataLists.length;index++) {
+//			slivers.add(_makeFixedHeader(context));
+//			slivers.addAll(_buildLists(context, 0, index));
+//			slivers.add(_makeFixedFooter(context));
+//		}
+//		slivers.add(_makeFixedHeader(context));
 //		slivers.addAll(_buildSideHeaderGrids(context, i, i += 1));
 		return slivers;
 		
 	}
 	
-	List<Widget> _buildLists(BuildContext context, int firstIndex, int count) {
-		return List.generate(1, (sliverIndex) {
-			sliverIndex += firstIndex;
-			return new SliverStickyHeader(
-				header: _buildHeader(sliverIndex),
-				sliver: new SliverList(
-					delegate: new SliverChildBuilderDelegate(
-						  (context, i) => InkWell(
-							    onTap: () { // 按下
-								    print(dataLists[count][i]);
-							    },
-								child:_makeCustomerCell(i,count)
-						  ),
-						childCount: dataLists[count].length,
-					),
-				),
-			);
-		});
-	}
-	
-	Widget _makeCustomerCell(int i,int count) {
-		return new Container(
-		    height:44,
-		    color:Colors.white,
-		    child:Column(
-			    children: <Widget>[
-				    new Container(
-					    height:43,
-					    child: new Stack(
-							children: <Widget>[
-								new Container(
-									margin:EdgeInsets.fromLTRB(15, 0, 0, 0),
-									child: new Align(
-									    alignment: FractionalOffset.centerLeft,
-									    child:new Row(
-											  mainAxisAlignment: MainAxisAlignment.center,
-											  mainAxisSize: MainAxisSize.min,
-											  children: <Widget>[
-												  new Image.asset('assets/images/${dataLists[count][i]["png"]}'),//("${dataLists[count][i]["png"]}"),
-												  Container(
-													  margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
-													  child: new Text(
-														  "${dataLists[count][i]["vals"]}",
-														  style: new TextStyle(
-															  fontSize: 16.0, ),
-													  ),
-												  )
-											  ],
-									    )
-									),
-								),
-								new Container(
-			                        margin:EdgeInsets.fromLTRB(0, 0, 15, 0),
-			                        child:new Align(
-				                        alignment: FractionalOffset.centerRight,
-				                        child:  new Container(
-					                        child: new Image.asset('assets/images/seeIcon.png'),
-				                        ),
-			                        )
-								),
-							]
-					    ),
-				    ),new Container(
-					    margin: EdgeInsets.all(0),
-					    height:1,
-					    color: "$i" == "${dataLists[count].length - 1}" ? Colors.white : Color(STColors.colorC08),
-				    )
-			    ],
-		    )
-		);
-	}
-	
-	Widget _buildUnAtacticCell() {
-		return  new SliverToBoxAdapter(
-			child: new Container(
-			  margin: EdgeInsets.only(top: 15.0,),
-			  child: new Row(
-				  children: <Widget>[
-					  new Expanded(child: new Container(
-						  child: new Text("新闻内容1",
-							  style: new TextStyle(
-								color: Colors.black45
-							  ),
-						  ),
-						  color: Colors.redAccent,
-						  padding: EdgeInsets.only(left: 20.0, top: 20.0),
-						  margin: EdgeInsets.only(left: 15.0, right: 5.0),
-						  height: 150,
-//						  decoration: new BoxDecoration(
-//							borderRadius: BorderRadius.all(
-//							  const Radius.circular(5.0)),
-//							image: DecorationImage(
-//							  image: AssetImage(""),
-//							  fit: BoxFit.cover)
+//	List<Widget> _buildLists(BuildContext context, int firstIndex, int count) {
+//		return List.generate(1, (sliverIndex) {
+//			sliverIndex += firstIndex;
+//			return new SliverStickyHeader(
+//				header: _buildHeader(sliverIndex),
+//				sliver: new SliverList(
+//					delegate: new SliverChildBuilderDelegate(
+//						  (context, i) => InkWell(
+//							    onTap: () { // 按下
+//								    print(dataLists[count][i]);
+//							    },
+//								child:_makeCustomerCell(i,count)
 //						  ),
-					  )
-					  ),
-					  new Expanded(child: new Column(
-						  children: <Widget>[
-							  new Container(
-								  child: new Text("新闻内容2",
-									  style: new TextStyle(
-										color: Colors.black45
-									  ),
-								  ),
-								  height: 70,
-								  color: Colors.redAccent,
-								  padding: EdgeInsets.only(left: 10.0, top: 10.0),
-								  margin: EdgeInsets.only(
-									  left: 5.0,
-									  right: 15.0,
-									  bottom: 5.0,),
-								  width: double.infinity,
-//								  decoration: new BoxDecoration(
-//									borderRadius: BorderRadius.all(
-//									  const Radius.circular(5.0)),
-//									image: DecorationImage(
-//									  image: AssetImage(""),
-//									  fit: BoxFit.fill)
+//						childCount: dataLists[count].length,
+//					),
+//				),
+//			);
+//		});
+//	}
+//
+//	Widget _makeCustomerCell(int i,int count) {
+//		return new Container(
+//		    height:44,
+//		    color:Colors.white,
+//		    child:Column(
+//			    children: <Widget>[
+//				    new Container(
+//					    height:43,
+//					    child: new Stack(
+//							children: <Widget>[
+//								new Container(
+//									margin:EdgeInsets.fromLTRB(15, 0, 0, 0),
+//									child: new Align(
+//									    alignment: FractionalOffset.centerLeft,
+//									    child:new Row(
+//											  mainAxisAlignment: MainAxisAlignment.center,
+//											  mainAxisSize: MainAxisSize.min,
+//											  children: <Widget>[
+//												  new Image.asset('assets/images/${dataLists[count][i]["png"]}'),//("${dataLists[count][i]["png"]}"),
+//												  Container(
+//													  margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+//													  child: new Text(
+//														  "${dataLists[count][i]["vals"]}",
+//														  style: new TextStyle(
+//															  fontSize: 16.0, ),
+//													  ),
+//												  )
+//											  ],
+//									    )
+//									),
+//								),
+//								new Container(
+//			                        margin:EdgeInsets.fromLTRB(0, 0, 15, 0),
+//			                        child:new Align(
+//				                        alignment: FractionalOffset.centerRight,
+//				                        child:  new Container(
+//					                        child: new Image.asset('assets/images/seeIcon.png'),
+//				                        ),
+//			                        )
+//								),
+//							]
+//					    ),
+//				    ),new Container(
+//					    margin: EdgeInsets.all(0),
+//					    height:1,
+//					    color: "$i" == "${dataLists[count].length - 1}" ? Colors.white : Color(STColors.colorC08),
+//				    )
+//			    ],
+//		    )
+//		);
+//	}
+	
+//	Widget _buildUnAtacticCell() {
+//		return  new SliverToBoxAdapter(
+//			child: new Container(
+//			  margin: EdgeInsets.only(top: 15.0,),
+//			  child: new Row(
+//				  children: <Widget>[
+//					  new Expanded(child: new Container(
+//						  child: new Text("新闻内容1",
+//							  style: new TextStyle(
+//								color: Colors.black45
+//							  ),
+//						  ),
+//						  color: Colors.redAccent,
+//						  padding: EdgeInsets.only(left: 20.0, top: 20.0),
+//						  margin: EdgeInsets.only(left: 15.0, right: 5.0),
+//						  height: 150,
+////						  decoration: new BoxDecoration(
+////							borderRadius: BorderRadius.all(
+////							  const Radius.circular(5.0)),
+////							image: DecorationImage(
+////							  image: AssetImage(""),
+////							  fit: BoxFit.cover)
+////						  ),
+//					  )
+//					  ),
+//					  new Expanded(child: new Column(
+//						  children: <Widget>[
+//							  new Container(
+//								  child: new Text("新闻内容2",
+//									  style: new TextStyle(
+//										color: Colors.black45
+//									  ),
 //								  ),
-							  ),
-							  new Container(
-								  padding: EdgeInsets.only(left: 10.0, top: 10.0),
-								  color: Colors.redAccent,
-								  margin: EdgeInsets.only(
-									left: 5.0,
-									right: 15,
-									top: 5.0),
-								  child: new Text("新闻内容3",
-									  style: new TextStyle(
-										color: Colors.black45
-									  ),),
-								  height: 70,
-								  width: double.infinity,
-//								  decoration: new BoxDecoration(
-//									borderRadius: BorderRadius.all(
-//									  const Radius.circular(5.0)),
-//									image: DecorationImage(
-//									  image: AssetImage(""),
-//									  fit: BoxFit.fill)
-//								  ),
-							  )
-						  ],
-					  ))
-				  ],
-			  )
-			),
-		);
-	}
+//								  height: 70,
+//								  color: Colors.redAccent,
+//								  padding: EdgeInsets.only(left: 10.0, top: 10.0),
+//								  margin: EdgeInsets.only(
+//									  left: 5.0,
+//									  right: 15.0,
+//									  bottom: 5.0,),
+//								  width: double.infinity,
+////								  decoration: new BoxDecoration(
+////									borderRadius: BorderRadius.all(
+////									  const Radius.circular(5.0)),
+////									image: DecorationImage(
+////									  image: AssetImage(""),
+////									  fit: BoxFit.fill)
+////								  ),
+//							  ),
+//							  new Container(
+//								  padding: EdgeInsets.only(left: 10.0, top: 10.0),
+//								  color: Colors.redAccent,
+//								  margin: EdgeInsets.only(
+//									left: 5.0,
+//									right: 15,
+//									top: 5.0),
+//								  child: new Text("新闻内容3",
+//									  style: new TextStyle(
+//										color: Colors.black45
+//									  ),),
+//								  height: 70,
+//								  width: double.infinity,
+////								  decoration: new BoxDecoration(
+////									borderRadius: BorderRadius.all(
+////									  const Radius.circular(5.0)),
+////									image: DecorationImage(
+////									  image: AssetImage(""),
+////									  fit: BoxFit.fill)
+////								  ),
+//							  )
+//						  ],
+//					  ))
+//				  ],
+//			  )
+//			),
+//		);
+//	}
 	
 	Widget _sliverBuilder(BuildContext context, bool innerBoxIsScrolled) {
 		
@@ -277,11 +289,10 @@ class _MineViewController extends State<MineViewController>  with AutomaticKeepA
 				pinned: false,
 				flexibleSpace: FlexibleSpaceBar(
 					centerTitle: true,
-					title: Text('我是一个FlexibleSpaceBar'),
-					background: Image.network(
-						"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531798262708&di=53d278a8427f482c5b836fa0e057f4ea&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F342ac65c103853434cc02dda9f13b07eca80883a.jpg",
-						fit: BoxFit.cover,
-					),
+					title: Text("stone's MacBook"),
+//					background: Image.network(
+//						"http://images.baixingliangfan.cn/compressedPic/20190111154611_9862.jpg",fit: BoxFit.cover,
+//					),
 				),
 			);
 		}
@@ -318,10 +329,11 @@ class _MineViewController extends State<MineViewController>  with AutomaticKeepA
 			        indicatorColor: Colors.redAccent,
 			        unselectedLabelColor: Colors.grey,
 			        tabs: [
-				        Tab(icon: Icon(Icons.cake), text: '左侧'),
-				        Tab(icon: Icon(Icons.golf_course), text: '右侧'),
+				        Tab(text: '左'),
+				        Tab(text: '中'),
+				        Tab(text: '右'),
 			        ],
-			        controller: TabController(length: 2, vsync: this),
+			        controller: _tabController,
 		        )
 		    )
 		);
@@ -350,88 +362,88 @@ class _MineViewController extends State<MineViewController>  with AutomaticKeepA
 		);
 	}
 	
-	List<Widget> _buildSideHeaderGrids(
-	    BuildContext context, int firstIndex, int count) {
-			return List.generate(count, (sliverIndex) {
-				sliverIndex += firstIndex;
-				return new SliverStickyHeader(
-					overlapsContent: true,
-					header: _buildSideHeader(context, sliverIndex),
-					sliver: new SliverPadding(
-						padding: new EdgeInsets.only(left: 60.0),
-						sliver: new SliverGrid(
-							gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
-							  crossAxisCount: 3,
-							  crossAxisSpacing: 4.0,
-							  mainAxisSpacing: 4.0,
-							  childAspectRatio: 1.0),
-							delegate: new SliverChildBuilderDelegate( (context, i) =>
-							    GestureDetector(
-									onTap: () => Scaffold.of(context).showSnackBar(
-									  new SnackBar(content: Text('Grid tile #$i'))),
-									child: new GridTile(
-										child: Card(
-											child: new Container(
-												color: Colors.orange,
-											),
-										),
-										footer: new Container(
-											color: Colors.white.withOpacity(0.5),
-											child: Padding(
-												padding: const EdgeInsets.all(8.0),
-												child: new Text(
-													'Grid tile #$i',
-													style: const TextStyle(color: Colors.black),
-												),
-											),
-										),
-									),
-								),
-								childCount: 12,
-							),
-						),
-					),
-				);
-			});
-		}
-	
-	
-	List<Widget> _buildGrids(BuildContext context, int firstIndex, int count) {
-		return List.generate(count, (sliverIndex) {
-			sliverIndex += firstIndex;
-			return new SliverStickyHeader(
-				header: _buildHeader(sliverIndex),
-				sliver: new SliverGrid(
-					gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
-					  crossAxisCount: 3, crossAxisSpacing: 4.0, mainAxisSpacing: 4.0),
-					delegate: new SliverChildBuilderDelegate(
-						  (context, i) => GestureDetector(
-							onTap: () => Scaffold.of(context).showSnackBar(
-							  new SnackBar(content: Text('Grid tile #$i'))),
-							child: new GridTile(
-								child: Card(
-									child: new Container(
-										color: Colors.green,
-									),
-								),
-								footer: new Container(
-									color: Colors.white.withOpacity(0.5),
-									child: Padding(
-										padding: const EdgeInsets.all(8.0),
-										child: new Text(
-											'Grid tile #$i',
-											style: const TextStyle(color: Colors.black),
-										),
-									),
-								),
-							),
-						),
-						childCount: 9,
-					),
-				),
-			);
-		});
-	}
+//	List<Widget> _buildSideHeaderGrids(
+//	    BuildContext context, int firstIndex, int count) {
+//			return List.generate(count, (sliverIndex) {
+//				sliverIndex += firstIndex;
+//				return new SliverStickyHeader(
+//					overlapsContent: true,
+//					header: _buildSideHeader(context, sliverIndex),
+//					sliver: new SliverPadding(
+//						padding: new EdgeInsets.only(left: 60.0),
+//						sliver: new SliverGrid(
+//							gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+//							  crossAxisCount: 3,
+//							  crossAxisSpacing: 4.0,
+//							  mainAxisSpacing: 4.0,
+//							  childAspectRatio: 1.0),
+//							delegate: new SliverChildBuilderDelegate( (context, i) =>
+//							    GestureDetector(
+//									onTap: () => Scaffold.of(context).showSnackBar(
+//									  new SnackBar(content: Text('Grid tile #$i'))),
+//									child: new GridTile(
+//										child: Card(
+//											child: new Container(
+//												color: Colors.orange,
+//											),
+//										),
+//										footer: new Container(
+//											color: Colors.white.withOpacity(0.5),
+//											child: Padding(
+//												padding: const EdgeInsets.all(8.0),
+//												child: new Text(
+//													'Grid tile #$i',
+//													style: const TextStyle(color: Colors.black),
+//												),
+//											),
+//										),
+//									),
+//								),
+//								childCount: 12,
+//							),
+//						),
+//					),
+//				);
+//			});
+//		}
+//
+//
+//	List<Widget> _buildGrids(BuildContext context, int firstIndex, int count) {
+//		return List.generate(count, (sliverIndex) {
+//			sliverIndex += firstIndex;
+//			return new SliverStickyHeader(
+//				header: _buildHeader(sliverIndex),
+//				sliver: new SliverGrid(
+//					gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+//					  crossAxisCount: 3, crossAxisSpacing: 4.0, mainAxisSpacing: 4.0),
+//					delegate: new SliverChildBuilderDelegate(
+//						  (context, i) => GestureDetector(
+//							onTap: () => Scaffold.of(context).showSnackBar(
+//							  new SnackBar(content: Text('Grid tile #$i'))),
+//							child: new GridTile(
+//								child: Card(
+//									child: new Container(
+//										color: Colors.green,
+//									),
+//								),
+//								footer: new Container(
+//									color: Colors.white.withOpacity(0.5),
+//									child: Padding(
+//										padding: const EdgeInsets.all(8.0),
+//										child: new Text(
+//											'Grid tile #$i',
+//											style: const TextStyle(color: Colors.black),
+//										),
+//									),
+//								),
+//							),
+//						),
+//						childCount: 9,
+//					),
+//				),
+//			);
+//		});
+//	}
 	
 	Widget _buildHeader(int index, {String text}) {
 		return new Container(
@@ -446,150 +458,150 @@ class _MineViewController extends State<MineViewController>  with AutomaticKeepA
 		);
 	}
 	
-	List<Widget> _buildHeaderBuilderLists(
-	    BuildContext context, int firstIndex, int count) {
-			return List.generate(count, (sliverIndex) {
-				sliverIndex += firstIndex;
-				return new SliverStickyHeaderBuilder(
-					builder: (context, state) =>
-					  _buildAnimatedHeader(context, sliverIndex, state),
-					sliver: new SliverList(
-						delegate: new SliverChildBuilderDelegate(
-							  (context, i) => new ListTile(
-								leading: new CircleAvatar(
-									child: new Text('$sliverIndex'),
-								),
-								title: new Text('List tile #$i'),
-							),
-							childCount: 4,
-						),
-					),
-				);
-			});
-		}
-	
-	Widget _buildAnimatedHeader(
-	    BuildContext context, int index, SliverStickyHeaderState state) {
-			return GestureDetector(
-				onTap: () => Scaffold.of(context).showSnackBar(new SnackBar(content: Text('$index'))),
-				child: new Container(
-					height: 60.0,
-					color: (state.isPinned ? Colors.pink : Colors.lightBlue)
-					  .withOpacity(1.0 - state.scrollPercentage),
-					padding: EdgeInsets.symmetric(horizontal: 16.0),
-					alignment: Alignment.centerLeft,
-					child: new Text(
-						'Header #$index',
-						style: const TextStyle(color: Colors.white),
-					),
-				),
-			);
-		}
-	
-	
-	Widget _buildExample(BuildContext context) {
-		return new SliverStickyHeader(
-			header: new Container(
-			    height: kToolbarHeight + Macros.StatusH(context),
-				color: Colors.lightBlue,
-				padding: EdgeInsets.symmetric(horizontal: 16.0),
-				alignment: Alignment.centerLeft,
-			    child: new Container(
-				    margin: EdgeInsets.fromLTRB(0, Macros.StatusH(context), 0, 0),
-				    height:kToolbarHeight,
-				    child: new Center(
-					    child:new Text(
-						    '测试',
-						    style: TextStyle(color: Colors.white,fontSize: 24),
-					    ),
-				    ),
-			    )
-			),
-			sliver: new SliverList(
-				delegate: new SliverChildBuilderDelegate(
-					  (context, i) => new ListTile(
-						leading: new CircleAvatar(
-							child: new Text('0'),
-						),
-						title: new Text('List tile #$i'),
-					),
-					childCount: 4,
-				),
-			),
-		);
-	}
-	
-	Widget _buildBuilderExample() {
-		return new SliverStickyHeaderBuilder(
-			builder: (context, state) => new Container(
-				height: kToolbarHeight + Macros.StatusH(context),
-				color: (state.isPinned ? Colors.pink : Colors.lightBlue)
-				  .withOpacity(1.0 - state.scrollPercentage),
-				padding: EdgeInsets.symmetric(horizontal: 16.0),
-				alignment: Alignment.centerLeft,
-				child: new Container(
-					margin: EdgeInsets.fromLTRB(0, Macros.StatusH(context), 0, 0),
-					height:kToolbarHeight,
-					child: new Center(
-						child:new Text(
-							'测试',
-							style: TextStyle(color: Colors.white,fontSize: 24),
-						),
-					),
-				)
-			),
-			sliver: new SliverList(
-				delegate: new SliverChildBuilderDelegate(
-					  (context, i) => new ListTile(
-						leading: new CircleAvatar(
-							child: new Text('0'),
-						),
-						title: new Text('List tile #$i'),
-					),
-					childCount: 100,
-				),
-			),
-		);
-	}
-	
-	Widget _makeStatusAndNaviBar(BuildContext context) {
-		
-		return new Container(
-		    width:Macros.ScreenW(context),
-		    height:Macros.StatusH(context) + kToolbarHeight,
-		    child: new Container(
-			    margin: EdgeInsets.fromLTRB(15.0, Macros.StatusH(context), 15.0, 0),
-			    width:Macros.ScreenW(context) - 30.0,
-			    height: kToolbarHeight,
-			    child:new Stack(
-					children: <Widget>[
-						new Align(
-							alignment: FractionalOffset.centerLeft,
-							child:GestureDetector(
-								onTap: () { // 按下
-									Navigator.pop(context);
-								},
-								child: new Container(
-									child: new Image.asset('assets/images/clickBack.png'),
-								),
-							),
-						),
-						new Align(
-							alignment: FractionalOffset.centerRight,
-							child: GestureDetector(
-								onTap: () { // 按下
-									print("按下了哈哈哈哈哈");
-								},
-								child: new Container(
-									child: new Image.asset('assets/images/clickBack.png'),
-								),
-							),
-						),
-					]
-			    ),
-		    )
-		);
-	}
+//	List<Widget> _buildHeaderBuilderLists(
+//	    BuildContext context, int firstIndex, int count) {
+//			return List.generate(count, (sliverIndex) {
+//				sliverIndex += firstIndex;
+//				return new SliverStickyHeaderBuilder(
+//					builder: (context, state) =>
+//					  _buildAnimatedHeader(context, sliverIndex, state),
+//					sliver: new SliverList(
+//						delegate: new SliverChildBuilderDelegate(
+//							  (context, i) => new ListTile(
+//								leading: new CircleAvatar(
+//									child: new Text('$sliverIndex'),
+//								),
+//								title: new Text('List tile #$i'),
+//							),
+//							childCount: 4,
+//						),
+//					),
+//				);
+//			});
+//		}
+//
+//	Widget _buildAnimatedHeader(
+//	    BuildContext context, int index, SliverStickyHeaderState state) {
+//			return GestureDetector(
+//				onTap: () => Scaffold.of(context).showSnackBar(new SnackBar(content: Text('$index'))),
+//				child: new Container(
+//					height: 60.0,
+//					color: (state.isPinned ? Colors.pink : Colors.lightBlue)
+//					  .withOpacity(1.0 - state.scrollPercentage),
+//					padding: EdgeInsets.symmetric(horizontal: 16.0),
+//					alignment: Alignment.centerLeft,
+//					child: new Text(
+//						'Header #$index',
+//						style: const TextStyle(color: Colors.white),
+//					),
+//				),
+//			);
+//		}
+//
+//
+//	Widget _buildExample(BuildContext context) {
+//		return new SliverStickyHeader(
+//			header: new Container(
+//			    height: kToolbarHeight + Macros.StatusH(context),
+//				color: Colors.lightBlue,
+//				padding: EdgeInsets.symmetric(horizontal: 16.0),
+//				alignment: Alignment.centerLeft,
+//			    child: new Container(
+//				    margin: EdgeInsets.fromLTRB(0, Macros.StatusH(context), 0, 0),
+//				    height:kToolbarHeight,
+//				    child: new Center(
+//					    child:new Text(
+//						    '测试',
+//						    style: TextStyle(color: Colors.white,fontSize: 24),
+//					    ),
+//				    ),
+//			    )
+//			),
+//			sliver: new SliverList(
+//				delegate: new SliverChildBuilderDelegate(
+//					  (context, i) => new ListTile(
+//						leading: new CircleAvatar(
+//							child: new Text('0'),
+//						),
+//						title: new Text('List tile #$i'),
+//					),
+//					childCount: 4,
+//				),
+//			),
+//		);
+//	}
+//
+//	Widget _buildBuilderExample() {
+//		return new SliverStickyHeaderBuilder(
+//			builder: (context, state) => new Container(
+//				height: kToolbarHeight + Macros.StatusH(context),
+//				color: (state.isPinned ? Colors.pink : Colors.lightBlue)
+//				  .withOpacity(1.0 - state.scrollPercentage),
+//				padding: EdgeInsets.symmetric(horizontal: 16.0),
+//				alignment: Alignment.centerLeft,
+//				child: new Container(
+//					margin: EdgeInsets.fromLTRB(0, Macros.StatusH(context), 0, 0),
+//					height:kToolbarHeight,
+//					child: new Center(
+//						child:new Text(
+//							'测试',
+//							style: TextStyle(color: Colors.white,fontSize: 24),
+//						),
+//					),
+//				)
+//			),
+//			sliver: new SliverList(
+//				delegate: new SliverChildBuilderDelegate(
+//					  (context, i) => new ListTile(
+//						leading: new CircleAvatar(
+//							child: new Text('0'),
+//						),
+//						title: new Text('List tile #$i'),
+//					),
+//					childCount: 100,
+//				),
+//			),
+//		);
+//	}
+//
+//	Widget _makeStatusAndNaviBar(BuildContext context) {
+//
+//		return new Container(
+//		    width:Macros.ScreenW(context),
+//		    height:Macros.StatusH(context) + kToolbarHeight,
+//		    child: new Container(
+//			    margin: EdgeInsets.fromLTRB(15.0, Macros.StatusH(context), 15.0, 0),
+//			    width:Macros.ScreenW(context) - 30.0,
+//			    height: kToolbarHeight,
+//			    child:new Stack(
+//					children: <Widget>[
+//						new Align(
+//							alignment: FractionalOffset.centerLeft,
+//							child:GestureDetector(
+//								onTap: () { // 按下
+//									Navigator.pop(context);
+//								},
+//								child: new Container(
+//									child: new Image.asset('assets/images/clickBack.png'),
+//								),
+//							),
+//						),
+//						new Align(
+//							alignment: FractionalOffset.centerRight,
+//							child: GestureDetector(
+//								onTap: () { // 按下
+//									print("按下了哈哈哈哈哈");
+//								},
+//								child: new Container(
+//									child: new Image.asset('assets/images/clickBack.png'),
+//								),
+//							),
+//						),
+//					]
+//			    ),
+//		    )
+//		);
+//	}
 	
 	@override
 	bool get wantKeepAlive => true;

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import '../Model/CarouselMs.dart';
+import 'package:flutter_app/Classes/DesignReport(设计报告)/Model/CarouselMs.dart';
 
 class BannerView extends StatefulWidget {
 	final List<CarouselChildMs> bannerStories;

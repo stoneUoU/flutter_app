@@ -12,6 +12,12 @@ import 'package:provide/provide.dart';
 import '../../../Provider(状态管理)/LeftNaviProvider.dart';
 import '../../../Provider(状态管理)/RightGoodViewProvider.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:flutter_app/Common/Util/HudTips.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../Routes(路由)/Routes.dart';
+import '../../../Application.dart';
 
 //  在这个文件中：Macros.StatusH(context)会等于0
 class RightGoodViewController extends StatefulWidget {
@@ -25,16 +31,17 @@ class RightGoodViewController extends StatefulWidget {
       _RightGoodViewControllerState();
 }
 
-class _RightGoodViewControllerState extends State<RightGoodViewController>
-    with AutomaticKeepAliveClientMixin {
+class _RightGoodViewControllerState extends State<RightGoodViewController> {
   final log = Logger('_RightGoodViewController');
   GoodMs goodMs;
   KindData kindData;
   BxMallSubDto firstBxMallSubDto = BxMallSubDto();
   List<int> clickFlag = [];
   int page = 1;
-  GlobalKey<EasyRefreshState> _RightGoodViewController_easyRefreshKey = new GlobalKey<EasyRefreshState>();
-  GlobalKey<RefreshFooterState> _RightGoodViewController_footerKey = new GlobalKey<RefreshFooterState>();
+  GlobalKey<EasyRefreshState> _RightGoodViewController_easyRefreshKey =
+      new GlobalKey<EasyRefreshState>();
+  GlobalKey<RefreshFooterState> _RightGoodViewController_footerKey =
+      new GlobalKey<RefreshFooterState>();
   @override
   void initState() {
     // TODO: implement initState
@@ -43,6 +50,7 @@ class _RightGoodViewControllerState extends State<RightGoodViewController>
     firstBxMallSubDto.mallCategoryId = "";
     firstBxMallSubDto.mallSubName = "全部";
     firstBxMallSubDto.comments = "";
+    if (!mounted) return;
   }
 
   @override
@@ -60,13 +68,13 @@ class _RightGoodViewControllerState extends State<RightGoodViewController>
           child: new Column(
         children: <Widget>[
           Container(
-            height: 43,
+            height: ScreenUtil().setHeight(87),
             child: StreamBuilder<LeftNaviProvider>(
               initialData: Provide.value<LeftNaviProvider>(context),
               stream: Provide.stream<LeftNaviProvider>(context),
               builder: (BuildContext context,
                   AsyncSnapshot<LeftNaviProvider> snapshot) {
-	              page = 1;
+                page = 1;
                 _getGoodMs("", page,
                     categoryId:
                         "${Provide.value<LeftNaviProvider>(context).categoryId}");
@@ -94,37 +102,38 @@ class _RightGoodViewControllerState extends State<RightGoodViewController>
                   }
                   Provide.value<RightGoodViewProvider>(context)
                       .putTopClickFlag(clickFlag);
-                  Provide.value<RightGoodViewProvider>(context).putCategorySubId(firstBxMallSubDto.mallSubId);
+                  Provide.value<RightGoodViewProvider>(context)
+                      .putCategorySubId(firstBxMallSubDto.mallSubId);
                   return _getRightListView(kindData);
                 }
               },
             ),
           ),
           Container(
-            width: Macros.ScreenW(context) - 120,
-            height: 1,
+            width: Macros.ScreenW(context) - ScreenUtil().setWidth(180),
+            height: ScreenUtil().setHeight(1),
             color: Colors.black12,
           ),
           Container(
-            width: Macros.ScreenW(context) - 120,
+            width: Macros.ScreenW(context) - ScreenUtil().setWidth(180),
             height: Macros.ScreenH(context) -
                 Macros.NaviH -
                 widget.tabbarSafeBottomM -
                 widget.statusH -
-                44 -
+                ScreenUtil().setHeight(88) -
                 kBottomNavigationBarHeight,
             child: StreamBuilder<RightGoodViewProvider>(
-	            initialData: Provide.value<RightGoodViewProvider>(context),
-	            stream: Provide.stream<RightGoodViewProvider>(context),
-	            builder: (BuildContext context,
-	              AsyncSnapshot<RightGoodViewProvider> snapshot) {
-		            if (snapshot.data.goodMs != null) {
-			            return _getContent(snapshot.data.goodMs,snapshot.data.categorySubId);
-		            } else {
-			            return Container();
-		            }
-		            
-	            },
+              initialData: Provide.value<RightGoodViewProvider>(context),
+              stream: Provide.stream<RightGoodViewProvider>(context),
+              builder: (BuildContext context,
+                  AsyncSnapshot<RightGoodViewProvider> snapshot) {
+                if (snapshot.data.goodMs != null) {
+                  return _getContent(
+                      snapshot.data.goodMs, snapshot.data.categorySubId);
+                } else {
+                  return Container();
+                }
+              },
             ),
           )
         ],
@@ -161,7 +170,7 @@ class _RightGoodViewControllerState extends State<RightGoodViewController>
             Provide.value<RightGoodViewProvider>(context)
                 .putTopClickFlag(clickFlag);
             Provide.value<RightGoodViewProvider>(context)
-              .putCategorySubId(bxMallSubDto.mallSubId);
+                .putCategorySubId(bxMallSubDto.mallSubId);
             page = 1;
             _getGoodMs("${bxMallSubDto.mallSubId}", page,
                 categoryId: "${kindData.mallCategoryId}");
@@ -171,62 +180,83 @@ class _RightGoodViewControllerState extends State<RightGoodViewController>
     );
   }
 
-  Widget _getContent(GoodMs goodMs,String categorySubId) {
-    if (goodMs == null ||goodMs.data == null) {
+  Widget _getContent(GoodMs goodMs, String categorySubId) {
+    if (goodMs == null || goodMs.data == null) {
       return new Center(
-	      child: Text(
-		      "暂无数据！！！",
-		      style: TextStyle(color: Colors.red, fontSize: 24),
-		      maxLines: 1,
-		      overflow: TextOverflow.ellipsis,
-	      ),
+        child: Text(
+          "暂无数据！！！",
+          style: TextStyle(color: Colors.red, fontSize: 24),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        ),
       );
     } else {
       return new EasyRefresh(
-	      key: _RightGoodViewController_easyRefreshKey,
-	      child: _getRightGridView(goodMs),
-	      refreshFooter: ClassicsFooter(
-		      key: _RightGoodViewController_footerKey,
-		      loadText: "上拉可以加载更多",
-		      loadReadyText: "松开立即加载更多",
-		      loadingText: "加载数据中"+"...",
-		      loadedText: "加载完成",
-		      noMoreText: "暂无更多数据",
-		      moreInfo: "更新数据...",
-		      bgColor: Colors.transparent,
-		      textColor: Colors.black87,
-		      moreInfoColor: Colors.black54,
-		      showMore: true,
-	      ),
-	      loadMore: () async {
-	      	page++;
-	        _getGoodMs(categorySubId, page,
-		      categoryId: "${kindData.mallCategoryId}");
-	      },
+        key: _RightGoodViewController_easyRefreshKey,
+        child: _getRightGridView(goodMs),
+        refreshFooter: ClassicsFooter(
+          key: _RightGoodViewController_footerKey,
+          loadText: "上拉可以加载更多",
+          loadReadyText: "松开立即加载更多",
+          loadingText: "加载数据中" + "...",
+          loadedText: "加载完成",
+          noMoreText: "暂无更多数据",
+          moreInfo: "更新数据...",
+          bgColor: Colors.transparent,
+          textColor: Colors.black87,
+          moreInfoColor: Colors.black54,
+          showMore: true,
+        ),
+        loadMore: () async {
+          page++;
+          _getGoodMs(categorySubId, page,
+              categoryId: "${kindData.mallCategoryId}");
+        },
       );
     }
   }
-
-  GridView _getRightGridView(GoodMs goodMs) => GridView.custom(
-        gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
-//      横轴数量 这里的横轴就是x轴 因为方向是垂直的时候 主轴是垂直的
-          crossAxisCount: 2,
-          mainAxisSpacing: 2.0,
-          crossAxisSpacing: 2.0,
-          childAspectRatio: 0.9,
-        ),
-        childrenDelegate: new SliverChildBuilderDelegate(
-          (context, index) {
-          	
-            return getRightGridRow(goodMs,index);
-          },
-          childCount: goodMs.data.length,
-        ),
-      );
-
-  Widget getRightGridRow(GoodMs goodMs,int i) {
-    GoodData goodData = goodMs.data[i];
-    return RightGridCell(goodData: goodData);
+  
+  //随机生成瀑布流：
+  StaggeredGridView _getRightGridView(GoodMs goodMs) =>
+    new  StaggeredGridView.count(
+      primary: false,
+      crossAxisCount: 4,
+      mainAxisSpacing: 4.0,
+      crossAxisSpacing: 4.0,
+      children: _getChildWidget(goodMs),
+      staggeredTiles: _getStaggeredTile(goodMs),
+    );
+  List<Widget> _getChildWidget(GoodMs goodMs) {
+    List<Widget> widgets= [];
+    for (var i = 0;i<goodMs.data.length;i++) {
+      GoodData goodData = goodMs.data[i];
+      widgets.add(RightGridCell(
+        goodData: goodData,
+        onRightGridCellClickListener: (GoodData goodData) {
+          String routeStr = Routes.goodDetailView;
+          var bodyJson = '{"goodId":"${goodData.goodsId}"}';
+          Application.router
+            .navigateTo(
+            context,
+            routeStr + "?data=" + bodyJson,
+          )
+            .then((result) {
+            //pop返回的回掉
+            print(result);
+          });
+        },
+      ));
+    }
+    return widgets;
+  }
+  
+  List<StaggeredTile> _getStaggeredTile(GoodMs goodMs) {
+    List<StaggeredTile> tiles= [];
+    for (var i = 0;i<goodMs.data.length;i++) {
+      GoodData goodData = goodMs.data[i];
+      tiles.add(const StaggeredTile.fit(2));
+    }
+    return tiles;
   }
 
   Future _getGoodMs(String categorySubId, int page, {String categoryId}) async {
@@ -238,9 +268,42 @@ class _RightGoodViewControllerState extends State<RightGoodViewController>
     };
     var feedBack = await BXLifeTools().post(url, data: data);
     Provide.value<RightGoodViewProvider>(context)
-      .putGoodMs(GoodMs.fromJson(json.decode(feedBack)));
+        .putGoodMs(GoodMs.fromJson(json.decode(feedBack)));
   }
+}
 
+
+
+
+class _Tile extends StatelessWidget {
+  const _Tile(this.source, this.index);
+  
+  final String source;
+  final int index;
+  
   @override
-  bool get wantKeepAlive => true;
+  Widget build(BuildContext context) {
+    return new Card(
+      child: new Column(
+        children: <Widget>[
+          new Image.network(source),
+          new Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: new Column(
+              children: <Widget>[
+                new Text(
+                  'Image number $index',
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+                new Text(
+                  'Vincent Van Gogh',
+                  style: const TextStyle(color: Colors.grey),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
 }

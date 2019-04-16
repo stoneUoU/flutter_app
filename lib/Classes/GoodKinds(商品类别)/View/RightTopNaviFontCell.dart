@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
 import '../Model/KindMs.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
+
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 //flutter闭包与android类似的
 typedef void OnRightTopNaviFontCellClickListener(BxMallSubDto bxMallSubDto);
@@ -24,13 +26,13 @@ class _RightTopNaviFontCellState extends State<RightTopNaviFontCell> {
 				widget.onRightTopNaviFontCellClickListener(widget.bxMallSubDto);
 			},
 			child: Container(
-			  height: 43,
+			  height: ScreenUtil().setHeight(43),
 			  padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
 			  child: Center(
 				  child: Text(
 					  "${widget.bxMallSubDto.mallSubName}",
 					  style: TextStyle(color: widget.changeColor == 1 ? Colors.red :Color(STColors.colorC04),
-					    fontSize: 14),
+					    fontSize: ScreenUtil().setSp(28)),
 					  textAlign: TextAlign.center,
 					  maxLines: 1,
 					  overflow: TextOverflow.ellipsis,

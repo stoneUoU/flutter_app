@@ -9,6 +9,8 @@ import '../View/LeftNaviFontCell.dart';
 import 'package:provide/provide.dart';
 import '../../../Provider(状态管理)/LeftNaviProvider.dart';
 
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class LeftNaviViewController extends StatefulWidget {
   double tabbarSafeBottomM;
   //构造函数
@@ -25,6 +27,7 @@ class _LeftNaviViewControllerState extends State<LeftNaviViewController> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    if (!mounted) return;
     getKindMs();
   }
 
@@ -42,7 +45,7 @@ class _LeftNaviViewControllerState extends State<LeftNaviViewController> {
         child: Row(
       children: <Widget>[
         Container(
-          width: 119,
+          width: ScreenUtil().setWidth(179),
           height: Macros.ScreenH(context) -
               Macros.NaviH -
               Macros.StatusH(context) -
@@ -51,7 +54,7 @@ class _LeftNaviViewControllerState extends State<LeftNaviViewController> {
           child: _getContent(),
         ),
         Container(
-            width: 1,
+            width: ScreenUtil().setWidth(1),
             height: Macros.ScreenH(context) -
                 Macros.NaviH -
                 Macros.StatusH(context) -

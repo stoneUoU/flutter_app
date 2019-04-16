@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
 import 'package:flutter_app/Macros.dart';
 import 'package:flutter_app/Common/Util/LocalData.dart';
 import 'package:flutter_app/Common/Util/HudTips.dart';
@@ -18,14 +18,12 @@ class HotViewController extends StatefulWidget {
 	_HotViewController createState() => _HotViewController();
 }
 
-class _HotViewController extends State<HotViewController> with AutomaticKeepAliveClientMixin {
-	
-	@override
-	bool get wantKeepAlive => true;
+class _HotViewController extends State<HotViewController> {
 	
 	@override
 	void initState() {
 		super.initState();
+		if (!mounted) return;
 	}
 	
 	@override

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/Macros.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
 //import 'package:provide/provide.dart';
 //import 'package:flutter_app/Provider(状态管理)/Counter.dart';
 //import 'package:flutter_app/Provider(状态管理)/CountBLoC.dart';
@@ -20,16 +20,14 @@ class NoticeViewController extends StatefulWidget {
 	
 }
 
-class _NoticeViewController extends State<NoticeViewController> with AutomaticKeepAliveClientMixin {
+class _NoticeViewController extends State<NoticeViewController> {
 	
 	List widgets = [];
 	
 	@override
-	bool get wantKeepAlive => true;
-	
-	@override
 	void initState() {
 		super.initState();
+		if (!mounted) return;
 	}
 	
 	@override
@@ -52,14 +50,8 @@ class _NoticeViewController extends State<NoticeViewController> with AutomaticKe
 							NoticeMs cellData = new NoticeMs.fromJson(data[i]);
 							widgets.add(cellData);
 						}
-						return Column(
-							children: <Widget>[
-								new Container(
-									width: Macros.ScreenW(context),
-									height: Macros.ScreenH(context) - Macros.TabbarSafeBottomM(context) - kBottomNavigationBarHeight - kToolbarHeight - Macros.StatusH(context),
-									child: getListView(),
-								)
-							],
+						return new Container(
+							child: getListView(),
 						);
 					}else{
 						return Center(

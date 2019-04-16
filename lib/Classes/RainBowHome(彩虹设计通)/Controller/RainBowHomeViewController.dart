@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import 'package:flutter_app/Macros.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
 import '../Model/RainBowHomeRotationMs.dart';
 import '../Model/RainBowHomeListMs.dart';
 import 'package:dio/dio.dart';
@@ -62,12 +62,8 @@ class _RainBowHomeViewController extends State<RainBowHomeViewController>
   void initState() {
     // TODO: implement initState
     super.initState();
+    if (!mounted) return;
     _futureBuilderFuture = _sendMutilR(1, 0, 1);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 
   @override
@@ -103,15 +99,13 @@ class _RainBowHomeViewController extends State<RainBowHomeViewController>
         width: Macros.ScreenW(context),
         height: Macros.ScreenH(context) -
             kBottomNavigationBarHeight -
-            Macros.TabbarSafeBottomM(
-                context),
+            Macros.TabbarSafeBottomM(context),
         child: new EasyRefresh(
           key: _easyRefreshKey,
-//          autoControl: false,
+          autoControl: false,
           behavior: ScrollOverBehavior(),
           child: new CustomScrollView(
             // 手动维护semanticChildCount,用于判断是否没有更多数据
-            semanticChildCount: 100,
             slivers: _buildSlivers(context, rotationMs, listMs),
           ),
           refreshHeader: ClassicsHeader(
@@ -139,10 +133,10 @@ class _RainBowHomeViewController extends State<RainBowHomeViewController>
           ),
           onRefresh: () async {
             //await new Future.delayed(const Duration(seconds: 3), () {
-              setState(() {
-                _pageIndex = 1;
-                _futureBuilderFuture = _sendMutilR(_pageIndex, 0, 0);
-              });
+            setState(() {
+              _pageIndex = 1;
+              _futureBuilderFuture = _sendMutilR(_pageIndex, 0, 0);
+            });
             //});
           },
           loadMore: () async {
@@ -195,6 +189,16 @@ class _RainBowHomeViewController extends State<RainBowHomeViewController>
       return PrivateSchoolCell(
         rs: listRs,
         onPrivateSchoolCellClickListener: (String str) {
+          if (listRs.type == 11) {
+            String routeStr = Routes.designDetailView;
+            var bodyJson = '{"user_id":10001,"reportId":$str}';
+            Application.router
+              .navigateTo(context, routeStr+"?data="+bodyJson,)
+              .then((result) {
+              //pop返回的回掉
+              print(result);
+            });
+          }
           print("_______${str}");
         },
       );
@@ -238,18 +242,17 @@ class _RainBowHomeViewController extends State<RainBowHomeViewController>
                   RainBowHorizontalView(
                     dataList: dataLists,
                     onHorizontalViewClickListener: (int index) {
-                      if(index == 1) {
+                      if (index == 1) {
                         String routeStr = Routes.designView;
-                        var bodyJson = '{"user_id":10001,"reportId":10001}';
                         Application.router
-                          .navigateTo(context, routeStr+"?data="+bodyJson,)
-                          .then((result) {
+                            .navigateTo(
+                          context,
+                          routeStr,
+                        ).then((result) {
                           //pop返回的回掉
                           print(result);
                         });
-                      } else {
-                      
-                      }
+                      } else {}
                     },
                   ),
                   MarqueeView(
@@ -278,13 +281,13 @@ class _RainBowHomeViewController extends State<RainBowHomeViewController>
 
   // TODO: 两个网络请求一起   firstR:是否第一次请求
   Future _sendMutilR(int pageindex, int ifLoad, int firstR) async {
-
+    print("_RainBowHomeViewController请求了");
     String url1 = "/Home/GetHomeInfoTop"; //图片轮播+跑马灯
     String url2 = "/2.0.0/User/DataRecommendationList"; //list列表数据
 
     var data1 = {"userType": "1"};
     var data2 = {
-      "TouristID": "9F2DB667-E32F-47BB-9A5E-23ED1C013808",
+      "TouristID": "9F2DB667-E32F-47BB-9A5E-23ED1C013800",
       "userId":
           "xiYKGnf7tf\/pNKH3y6K3iAdaU7OHRAZVEsSdBBd+hD+rTcelwJ3VYgfZVJlXRNjHAtPZ\/RRORrHvwEYdXQhLsMrp12F0FKrvFT2rUHwO0Aj3TLXMPB9MJzRwXpGf44sM3JuE1as+ISilADt4ChTE5aZdCJZJWbEOdo5dN6Q7x9o=",
       "pageindex": pageindex
@@ -302,16 +305,16 @@ class _RainBowHomeViewController extends State<RainBowHomeViewController>
     ]);
     if (firstR == 0) {
       //刷新完成
-//      if(ifLoad == 1) {
-//        _easyRefreshKey.currentState.callLoadMoreFinish();
-//      } else {
-//        _easyRefreshKey.currentState.callRefreshFinish();
-//      }
+      if (ifLoad == 1) {
+        _easyRefreshKey.currentState.callLoadMoreFinish();
+      } else {
+        _easyRefreshKey.currentState.callRefreshFinish();
+      }
     }
     if (ifLoad == 0) {
       if (int.parse(response[1].data["UpdateCount"].toString()) > 0) {
         HudTips.showToast(
-          "成功为您更新${response[1].data["UpdateCount"].toString()}条推荐");
+            "成功为您更新${response[1].data["UpdateCount"].toString()}条推荐");
       } else {
         HudTips.showToast("暂无更新");
       }
@@ -337,11 +340,10 @@ class _RainBowHomeViewController extends State<RainBowHomeViewController>
       Map<String, dynamic> resStr = lastRs.toJson();
       loadMoreJson.add(resStr);
     }
-    log.fine('loadMoreJson.data.length: ${loadMoreJson.length}');
     response[1].data["rs"] = loadMoreJson;
     return response;
   }
-  
+
   @override
   bool get wantKeepAlive => true;
 }
@@ -373,275 +375,3 @@ class _UnFixHeaderDelegate extends SliverPersistentHeaderDelegate {
     return false;
   }
 }
-
-//import 'dart:async';
-//import 'package:flutter_easyrefresh/easy_refresh.dart';
-//
-//import 'package:flutter/material.dart';
-//import 'package:flutter_app/Common/Util/HttpUtil.dart';
-//import '../../Home(主页)/Model/HomeMs.dart';
-//
-///// 手动控制页面
-//class RainBowHomeViewController extends StatefulWidget {
-//  @override
-//  _RainBowHomeViewController createState() => _RainBowHomeViewController();
-//}
-//
-//class _RainBowHomeViewController extends State<RainBowHomeViewController> {
-//  List<String> addStr=["1","2","3","4","5","6","7","8","9","0"];
-//  List<String> str=["1","2","3","4","5","6","7","8","9","0"];
-//  GlobalKey<EasyRefreshState> _easyRefreshKey =
-//      new GlobalKey<EasyRefreshState>();
-//  GlobalKey<RefreshHeaderState> _headerKey =
-//      new GlobalKey<RefreshHeaderState>();
-//  GlobalKey<RefreshFooterState> _footerKey =
-//      new GlobalKey<RefreshFooterState>();
-//  List widgets = [];
-//  int pageSize = 10;
-//  int pageIndex = 1;
-//
-////  @override
-////  void initState() {
-////    super.initState();
-////
-//////    _loadData(0);
-////  }
-//
-//  //isLoad: 0 下拉刷新   1  上拉加载
-////  _loadData(int isLoad) async {
-////    String url = "/Exhibition/GetReportList";
-////    var data = {"pageIndex": pageIndex, "pageSize": pageSize};
-////    var response = await HttpUtil().post(url, data: data);
-////    if (response["flag"] == 1) {
-////      print(response["rs"]);
-////      if (mounted) {
-////        setState(() {
-////          if(isLoad == 0){
-////            widgets.clear();
-////          }
-////          for (int i = 0; i < response["rs"].length; i++) {
-////            try {
-////              HomeMs cellData = new HomeMs.fromJSON(response["rs"][i]);
-////              widgets.add(cellData);
-////            } catch (e) {
-////              // No specified type, handles all
-////              print(e);
-////            }
-////          }
-////        });
-////      }
-////    }
-////  }
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    return Scaffold(
-//      appBar: AppBar(
-//        title: Text("manualControl"),
-//      ),
-//      body: Center(
-//          child: new EasyRefresh(
-//        key: _easyRefreshKey,
-//        behavior: ScrollOverBehavior(),
-//        autoControl: false,
-//        refreshHeader: ClassicsHeader(
-//            key: _headerKey,
-//            refreshText: "下拉可以  刷新",
-//            refreshReadyText: "松开立即刷新",
-//            refreshingText: "正在刷新数据中" + "...",
-//            refreshedText: "刷新完成",
-//            bgColor: Colors.transparent,
-//            textColor: Colors.black87,
-//            moreInfoColor: Colors.black54,
-//            showMore: true,
-//            moreInfo: "最后更新：%T"),
-//        refreshFooter: ClassicsFooter(
-//          key: _footerKey,
-//          loadText: "上拉可以加载更多",
-//          loadReadyText: "松开立即加载更多",
-//          loadingText: "加载数据中" + "...",
-//          loadedText: "加载完成",
-//          noMoreText: "暂无更多数据",
-//          moreInfo: "更新数据...",
-//          bgColor: Colors.transparent,
-//          textColor: Colors.black87,
-//          moreInfoColor: Colors.black54,
-//        ),
-////        child: new ListView.builder(
-////            //ListView的Item
-////            itemCount: widgets.length,
-////            itemBuilder: (BuildContext context, int index) {
-////              HomeMs homeMs = widgets[index];
-////              return new Container(
-////                  height: 70.0,
-////                  child: Card(
-////                    child: new Center(
-////                      child: new Text(
-////                        homeMs.title,
-////                        style: new TextStyle(fontSize: 18.0),
-////                      ),
-////                    ),
-////                  ));
-////            }),
-////        onRefresh: () {
-////            setState(() {
-////              pageIndex = 1;
-////              _loadData(0);
-////            });
-////        },
-////        loadMore: () {
-////          setState(() {
-////            pageIndex++;
-////            _loadData(1);
-////          });
-////        },
-//          child: new ListView.builder(
-//            //ListView的Item
-//            itemCount: str.length,
-//            itemBuilder: (BuildContext context,int index){
-//              return new Container(
-//                height: 70.0,
-//                child: Card(
-//                  child: new Center(
-//                    child: new Text(str[index],style: new TextStyle(fontSize: 18.0),),
-//                  ),
-//                )
-//              );
-//            }
-//          ),
-//          onRefresh: () async{
-//            await new Future.delayed(const Duration(seconds: 1), () {
-//              setState(() {
-//                str.clear();
-//                str.addAll(addStr);
-//              });
-//            });
-//          },
-//          loadMore: () async {
-//            await new Future.delayed(const Duration(seconds: 1), () {
-//              if (str.length < 20) {
-//                setState(() {
-//                  str.addAll(addStr);
-//                });
-//              }
-//            });
-//          },
-//      )),
-//      persistentFooterButtons: <Widget>[
-//        FlatButton(
-//            onPressed: () {
-//              _easyRefreshKey.currentState.callRefreshFinish();
-//            },
-//            child:
-//                Text("refreshFinish", style: TextStyle(color: Colors.black))),
-//        FlatButton(
-//            onPressed: () {
-//              _easyRefreshKey.currentState.callLoadMoreFinish();
-//            },
-//            child: Text("loadFinish", style: TextStyle(color: Colors.black)))
-//      ], // This trailing comma makes auto-formatting nicer for build methods.
-//    );
-//  }
-//}
-
-
-
-//import 'package:flutter/material.dart';
-//import 'package:flutter_easyrefresh/easy_refresh.dart';
-//
-///// 手动控制页面
-//class RainBowHomeViewController extends StatefulWidget {
-//    @override
-//    _RainBowHomeViewController createState() => _RainBowHomeViewController();
-//}
-//
-//class _RainBowHomeViewController extends State<RainBowHomeViewController> with AutomaticKeepAliveClientMixin {
-//
-//    List<String> addStr=["1","2","3","4","5","6","7","8","9","0"];
-//    List<String> str=["1","2","3","4","5","6","7","8","9","0"];
-//    GlobalKey<EasyRefreshState> _easyRefreshKey = new GlobalKey<EasyRefreshState>();
-//    GlobalKey<RefreshHeaderState> _headerKey = new GlobalKey<RefreshHeaderState>();
-//    GlobalKey<RefreshFooterState> _footerKey = new GlobalKey<RefreshFooterState>();
-//
-//    @override
-//    Widget build(BuildContext context) {
-//        return Scaffold(
-//            appBar: AppBar(
-//                title: Text("手动刷新"),
-//            ),
-//            body: Center(
-//              child: new EasyRefresh(
-//                  key: _easyRefreshKey,
-//                  behavior: ScrollOverBehavior(),
-//                  autoControl: false,
-//                  refreshHeader: ClassicsHeader(
-//                    key: _headerKey,
-//                    refreshText: "下拉可以  刷新",
-//                    refreshReadyText: "松开立即刷新",
-//                    refreshingText: "正在刷新数据中" + "...",
-//                    refreshedText: "刷新完成",
-//                    bgColor: Colors.transparent,
-//                    textColor: Colors.black87,
-//                    moreInfoColor: Colors.black54,
-//                    moreInfo: "最后更新：%T"),
-//                  refreshFooter: ClassicsFooter(
-//                      key: _footerKey,
-//                      loadText: "上拉可以加载更多",
-//                      loadReadyText: "松开立即加载更多",
-//                      loadingText: "加载数据中" + "...",
-//                      loadedText: "加载完成",
-//                      noMoreText: "暂无更多数据",
-//                      moreInfo: "更新数据...",
-//                      bgColor: Colors.transparent,
-//                      textColor: Colors.black87,
-//                      moreInfoColor: Colors.black54,
-//                      showMore: false,
-//                  ),
-//                  child: new ListView.builder(
-//                      //ListView的Item
-//                    itemCount: str.length,
-//                    itemBuilder: (BuildContext context,int index){
-//                        return new Container(
-//                          height: 70.0,
-//                          child: Card(
-//                              child: new Center(
-//                                  child: new Text(str[index],style: new TextStyle(fontSize: 18.0),),
-//                              ),
-//                          )
-//                        );
-//                    }
-//                  ),
-//                  onRefresh: () async{
-//                      await new Future.delayed(const Duration(seconds: 1), () {
-//                          setState(() {
-//                              str.clear();
-//                              str.addAll(addStr);
-//                          });
-//                      });
-//                  },
-//                  loadMore: () async {
-//                      //await new Future.delayed(const Duration(seconds: 1), () {
-//                          if (str.length < 100) {
-//                              setState(() {
-//                                  str.addAll(addStr);
-//                              });
-//                          }
-//                      //});
-//                  },
-//              )
-//            ),
-//            persistentFooterButtons: <Widget>[
-//                FlatButton(onPressed: () {
-//                    _easyRefreshKey.currentState.callRefreshFinish();
-//                }, child: Text("下拉刷新完成", style: TextStyle(color: Colors.black))),
-//                FlatButton(onPressed: () {
-//                    _easyRefreshKey.currentState.callLoadMoreFinish();
-//                }, child: Text("上拉加载完成", style: TextStyle(color: Colors.black)))
-//            ],// This trailing comma makes auto-formatting nicer for build methods.
-//        );
-//    }
-//    @override
-//    bool get wantKeepAlive => true;
-//}
-
-

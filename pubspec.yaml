@@ -13,7 +13,7 @@ dependencies:
     fluttertoast: ^2.2.2
     url_launcher: ^3.0.1
     flutter_spinkit: ^3.1.0
-    flutter_easyrefresh: 1.0.7 #下拉刷新库
+    flutter_easyrefresh: ^1.2.7 #下拉刷新库
     shared_preferences: ^0.4.2 #数据存储
     flutter_html: ^0.8.2
     connectivity: ^0.4.2
@@ -24,10 +24,14 @@ dependencies:
     flutter_screenutil: ^0.5.1 #屏幕适配
     provide: ^1.0.2
     flutter_swiper : ^1.1.6
+    flutter_staggered_grid_view: "^0.2.7"  #瀑布流
     flutter_marquee:
         git: https://github.com/LiuC520/flutter_marquee.git
     flutter_custom_bottom_tab_bar:
         git: https://github.com/LiuC520/flutter_custom_bottom_tab_bar   #真特么的奇怪
+    jpush_flutter: 0.0.11  #极光推送
+    photo_view: ^0.2.4 # 图片预览
+    cached_network_image: ^0.5.1 # Download, cache and show images
 
 dev_dependencies:
     flutter_test:

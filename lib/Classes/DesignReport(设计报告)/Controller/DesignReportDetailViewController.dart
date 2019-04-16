@@ -9,8 +9,12 @@ import 'package:flutter_easyrefresh/easy_refresh.dart';
 import '../Model/DesignReportMs.dart';
 
 import 'package:flutter_app/Macros.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
 import '../View/PhotoView.dart';
+
+import '../../../Common/Util/LogUtil.dart';
+
+import '../../../Common/PhotoView.dart';
 
 class DesignReportDetailViewController extends StatefulWidget {
   int reportId;
@@ -18,16 +22,17 @@ class DesignReportDetailViewController extends StatefulWidget {
   DesignReportDetailViewController({Key key, this.reportId}) : super(key: key);
 
   @override
-  _DesignReportDetailViewController createState() =>
-      _DesignReportDetailViewController();
+  _DesignReportDetailViewControllerState createState() =>
+      _DesignReportDetailViewControllerState();
 }
 
-class _DesignReportDetailViewController
+class _DesignReportDetailViewControllerState
     extends State<DesignReportDetailViewController> {
   List <String> imageLists = new List();
   bool flag = true;
   DesignReportMs renderMs = DesignReportMs();
-
+  final log = Logger('_DesignReportDetailViewController');
+  
   final ScrollController _scrollController = new ScrollController();
   GlobalKey<EasyRefreshState> _DesignReportDetailViewController_easyRefreshKey =
       new GlobalKey<EasyRefreshState>();
@@ -177,7 +182,7 @@ class _DesignReportDetailViewController
             padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
             width: Macros.ScreenW(context), //- 30.0,
             child: new FadeInImage.assetNetwork(
-              placeholder: "images/placeSite.jpg",
+              placeholder: "assets/images/placeSite.jpg",
               fadeInDuration: const Duration(seconds: 1), // 持续时间，默认 700 ms
               image: renderMs.cover,
               fit: BoxFit.cover,
@@ -368,17 +373,32 @@ class _DesignReportDetailViewController
                             imageLists.add(imgStr);
 							return GestureDetector(
 							    onTap: () {
-                                    int index=getNewList(imageLists).indexOf("${imgStr}");
-                                    print(getNewList(imageLists));
-                                    showDialog<Null>(
-                                      context: context,
-                                      barrierDismissible: false,
-                                      builder: (BuildContext context) {
-                                        return _makePhotoView(getNewList(imageLists),index);
-                                      },
-                                    ).then((val) {
-                                      print(val);
-                                    });
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      //builder: (context) => PhotoView(data: null, buildShowView: null)
+//                                        PhotoView(
+//                                        backgroundDecoration: const BoxDecoration(
+//                                          color: Colors.black87,
+//                                        ),
+//                                        imageProviders: List.generate(5, (gi){
+//                                          return CachedNetworkImageProvider("https://picsum.photos/350/500?image=${gi}");
+//                                        }).toList(),
+//                                        index: 0,
+//                                      ),
+                                    ));
+//                                    int index=getNewList(imageLists).indexOf("${imgStr}");
+//                                    print(getNewList(imageLists));
+//                                    showDialog<Null>(
+//                                      context: context,
+//                                      barrierDismissible: false,
+//                                      builder: (BuildContext context) {
+//                                        return _makePhotoView(getNewList(imageLists),index);
+//                                      },
+//                                    ).then((val) {
+//                                      print(val);
+//                                    });
+							        log.fine("________${node.outerHtml.substring(m.start+5,m.end-2)}");
 								},
 								child: Image.network("${node.outerHtml.substring(m.start+5,m.end-2)}"),
 							);

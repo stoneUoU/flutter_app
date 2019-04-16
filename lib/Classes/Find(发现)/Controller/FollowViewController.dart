@@ -3,7 +3,7 @@ import 'dart:io';
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
 import 'package:flutter_app/Macros.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter_app/Common/Util/HudTips.dart';
@@ -24,8 +24,7 @@ class FollowViewController extends StatefulWidget {
   _FollowViewController createState() => _FollowViewController();
 }
 
-class _FollowViewController extends State<FollowViewController>
-    with AutomaticKeepAliveClientMixin {
+class _FollowViewController extends State<FollowViewController> {
   //从手机中选择的图片
   File _image;
 
@@ -36,11 +35,9 @@ class _FollowViewController extends State<FollowViewController>
   MineChildMs mineChildMs;
 
   @override
-  bool get wantKeepAlive => true;
-
-  @override
   void initState() {
     super.initState();
+    if (!mounted) return;
     _setNet(0);
   }
 
@@ -51,6 +48,7 @@ class _FollowViewController extends State<FollowViewController>
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
         body: new Container(
             width: MediaQuery.of(context).size.width,
@@ -81,31 +79,7 @@ class _FollowViewController extends State<FollowViewController>
                             new TextStyle(fontSize: 24.0, color: Colors.white),
                         textAlign: TextAlign.left),
                   ),
-                ),
-//					    Column(
-//						    children: <Widget>[
-//							    Container(
-//								    margin: EdgeInsets.fromLTRB(0, 30.0, 0,0),
-//								    height: 30,
-//								    width: 200,
-//								    //这个跑马灯我看很强:
-//								    child: FlutterMarquee(
-//								      children: <Widget>[
-//									      Text(
-//										      "Stone",
-//										      style: TextStyle(color: Colors.white,fontSize: 18),
-//									      ),
-//									      Text("不屑的小坦克", style: TextStyle(color: Colors.white,fontSize: 18)),
-//									      Text("哈哈哈哈哈哈哈😄", style: TextStyle(color: Colors.white,fontSize: 18)),
-//								      ],
-//								      onChange: (i) {
-//									      print(i);
-//								      },
-//								      duration: 4
-//								    ),
-//							    )
-//						    ],
-//					    ),
+                )
               ],
             )));
   }
@@ -148,13 +122,12 @@ class _FollowViewController extends State<FollowViewController>
           child: ClipRRect(
             borderRadius: BorderRadius.circular(30),
             child: FadeInImage.assetNetwork(
-              placeholder: "images/avater_icon.png",
+              placeholder: "assets/images/avater_icon.png",
               image: "${Macros.PicUrl}${mineMs.avatar}",
               fit: BoxFit.cover,
             ),
           ),
         );
-        //return Image.network("${Macros.PicUrl}${mineMs.avatar}", fit: BoxFit.cover,width: 60.0,height:60.0);
       }
     }
   }
@@ -265,29 +238,31 @@ class _FollowViewController extends State<FollowViewController>
   }
 
   _setInfoData(String authosStr) async {
+    
     String url = "user/list";
-    var data = {};
-    var feedBack = await NetTools().get(url, data: data, authosStr: authosStr);
-    print("MMMMM____${json.decode(feedBack)}");
-    if (json.decode(feedBack)["code"] == 0) {
-      setState(() {
-        mineMs = new MineMs.fromJSON(json.decode(feedBack)["data"]);
-        mineChildMs = new MineChildMs.fromJSON(
-            json.decode(feedBack)["data"]["order_num"]);
-        mineMs.order_num = mineChildMs;
-      });
-    } else if (json.decode(feedBack)["code"] == 10009) {
-      HudTips.showToast(json.decode(feedBack)["msg"]);
-      LocalData.setPreference("AuthosStr", "");
-      EventBusTools.eventBus.fire(new LoginEvent(null));
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new CodeLoginViewController(
-          code: 1,
-        );
-      }));
-    } else {
-      HudTips.showToast(json.decode(feedBack)["msg"]);
-    }
+    print("_FollowViewController  已发送请求");
+//    var data = {};
+//    var feedBack = await NetTools().get(url, data: data, authosStr: authosStr);
+//    print("MMMMM____${json.decode(feedBack)}");
+//    if (json.decode(feedBack)["code"] == 0) {
+//      setState(() {
+//        mineMs = new MineMs.fromJSON(json.decode(feedBack)["data"]);
+//        mineChildMs = new MineChildMs.fromJSON(
+//            json.decode(feedBack)["data"]["order_num"]);
+//        mineMs.order_num = mineChildMs;
+//      });
+//    } else if (json.decode(feedBack)["code"] == 10009) {
+//      HudTips.showToast(json.decode(feedBack)["msg"]);
+//      LocalData.setPreference("AuthosStr", "");
+//      EventBusTools.eventBus.fire(new LoginEvent(null));
+//      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+//        return new CodeLoginViewController(
+//          code: 1,
+//        );
+//      }));
+//    } else {
+//      HudTips.showToast(json.decode(feedBack)["msg"]);
+//    }
   }
 
   _modifyPersonData(String authosStr) async {
@@ -300,18 +275,18 @@ class _FollowViewController extends State<FollowViewController>
     }
   }
 
-  _setEventBus() {
-    EventBusTools.eventBus.on<LoginEvent>().listen((event) {
-      if (!mounted) return;
-      print("====================");
-      setState(() {
-        if (event != null && event.token != null) {
-          print("FollowViewController_setEventBus");
-          _setNet(0);
-        } else {
-          print("空空如也+++++++++++++++++++  ");
-        }
-      });
-    });
-  }
+//  _setEventBus() {
+//    EventBusTools.eventBus.on<LoginEvent>().listen((event) {
+//      if (!mounted) return;
+//      print("====================");
+//      setState(() {
+//        if (event != null && event.token != null) {
+//          print("FollowViewController_setEventBus");
+//          _setNet(0);
+//        } else {
+//          print("空空如也+++++++++++++++++++  ");
+//        }
+//      });
+//    });
+//  }
 }

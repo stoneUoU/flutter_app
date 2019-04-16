@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../Model/HomeMs.dart';
 import 'package:flutter_app/Macros.dart';
-import 'package:flutter_app/Common/STStyle.dart';
+import 'package:flutter_app/Common/Config/STStyle.dart';
 //flutter闭包与android类似的
 
 typedef void OnHomeItemClickListener(int reportId);
@@ -40,7 +40,7 @@ class HomeList extends StatelessWidget {
 							padding:EdgeInsets.fromLTRB(0, 0, 0, 0),
 							width: Macros.ScreenW(context), //- 30.0,
 							child:new FadeInImage.assetNetwork(
-								placeholder: "images/placeSite.jpg",
+								placeholder: "assets/images/placeSite.jpg",
 								fadeInDuration: const Duration(seconds: 1), // 持续时间，默认 700 ms
 								image: homeMs.cover,
 								fit: BoxFit.cover,
